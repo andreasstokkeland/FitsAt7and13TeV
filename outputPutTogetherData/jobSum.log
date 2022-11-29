@@ -1,0 +1,27 @@
+rm: *.so: No such file or directory
+rm: *.d: No such file or directory
+rm: *.pcm: No such file or directory
+   ------------------------------------------------------------------
+  | Welcome to ROOT 6.24/06                        https://root.cern |
+  | (c) 1995-2021, The ROOT Team; conception: R. Brun, F. Rademakers |
+  | Built for macosx64 on Feb 07 2022, 18:03:00                      |
+  | From tags/v6-24-06@v6-24-06                                      |
+  | With Apple clang version 13.0.0 (clang-1300.0.29.30)             |
+  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q'       |
+   ------------------------------------------------------------------
+
+ld: warning: dylib (/usr/local/opt/gcc/lib/gcc/11/libgfortran.5.dylib) was built for newer macOS version (11.5) than being linked (11.0)
+ld: warning: dylib (/usr/local/opt/gcc/lib/gcc/11/libquadmath.0.dylib) was built for newer macOS version (11.5) than being linked (11.0)
+ld: warning: dylib (/usr/local/opt/gcc/lib/gcc/11/libgfortran.5.dylib) was built for newer macOS version (11.5) than being linked (11.0)
+ld: warning: dylib (/usr/local/opt/gcc/lib/gcc/11/libquadmath.0.dylib) was built for newer macOS version (11.5) than being linked (11.0)
+I-TMacOSXSystem::ACLiC: creating shared library /Users/AndreasStokkkeland/Sphere/outputStart/./Sum_C.so
+I-TH1F::SaveAs: ROOT file TotHEPData-ins1784041-v1-Table_1.rootHist1D_y1.root.root has been created
+I-TCanvas::SaveAs: ROOT file outputSum/TotHEPData-ins1784041-v1-Table_1.rootHist1D_y1.root.root has been created
+I-TCanvas::Print: eps file outputSum/TotHEPData-ins1784041-v1-Table_1.rootHist1D_y1.root.eps has been created
+I-TH1F::SaveAs: ROOT file TotHEPData-ins1784041-v1-Table_3.rootHist1D_y1.root.root has been created
+I-TCanvas::SaveAs: ROOT file outputSum/TotHEPData-ins1784041-v1-Table_3.rootHist1D_y1.root.root has been created
+I-TCanvas::Print: eps file outputSum/TotHEPData-ins1784041-v1-Table_3.rootHist1D_y1.root.eps has been created
+I-TH1F::SaveAs: ROOT file TotHEPData-ins1784041-v1-Table_5.rootHist1D_y1.root.root has been created
+I-TCanvas::SaveAs: ROOT file outputSum/TotHEPData-ins1784041-v1-Table_5.rootHist1D_y1.root.root has been created
+I-TCanvas::Print: eps file outputSum/TotHEPData-ins1784041-v1-Table_5.rootHist1D_y1.root.eps has been created
+The time of the code 15 s

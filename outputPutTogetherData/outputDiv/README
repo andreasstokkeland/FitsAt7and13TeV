@@ -1,0 +1,134 @@
+aliroot is used to compile the code:
+https://alice-doc.github.io/alice-analysis-tutorial/building/
+
+A .root file can be wieved with the command
+root "file name".root
+
+where you inside of root write
+TBrowser "your name for the browser (for example: a)"
+
+
+
+
+
+
+
+An explanation of the different files
+
+
+
+Those starting with Div and then numbers between 11 to 19 and ending with .eps or .root are files with a multiplicity class over its min bias for pions at 7 Tev.
+Searched for with:
+ls 1*.eps
+ls 1*.root
+for multiplicity classes 1 to 9 
+and the 10th at
+ls 20.eps
+ls 20.root
+
+
+Those starting with Div and then numbers between 21 to 29 and ending with .eps or .root are files with a multiplicity class over its min bias for kaons at 7 Tev.
+Searched for with:
+ls 2*.eps
+ls 2*.root
+for multiplicity classes 1 to 9 
+and the 10th at
+ls 30.eps
+ls 30.root
+
+
+Those starting with Div and then numbers between 31 to 39 and ending with .eps or .root are files with a multiplicity class over its min bias for protons at 7 Tev.
+Searched for with:
+ls 3*.eps
+ls 3*.root
+for multiplicity classes 1 to 9 
+and the 10th at
+ls 40.eps
+ls 40.root
+
+
+Those starting with DivHEPData-ins and ending with .eps or .root are files with the put together data for 13 Tev.
+Searched for with:
+ls HEPData-ins*.eps
+ls HEPData-ins*.root
+
+Table_1
+Table_2
+are for pions, Table_2 having the lowest multiplicity
+
+Table_3
+Table_4 
+are for kaons, Table_4 having the lowest multiplicity
+
+Table_5
+Table_6
+are for protons, Table_6 having the lowest multiplicity
+
+
+
+
+
+
+
+
+
+The Code
+
+
+The code is originally from
+https://root.cern.ch/doc/master/combinedFit_8C.html
+
+But has been molded for our case
+
+
+
+
+MultiFit2k7TeV.C and MultiFit2k13TeV.C are run in jobMultiFit2k.sh where the output can be put in jobMultiFit2k.log
+./jobMultiFit2k.sh >& jobMultiFit2k.log &
+
+This creates the combined fit for the 9 highest multiplicities.
+The first void prints the histograms for the 9 highest multiplicities with their fit (.eps)
+together with files with the soft and hard parameters and the constant for all multiplicities for one particle (.root).
+The .root files are then read by a second void that puts them together.
+
+
+The histograms with their fit
+Pions
+Comb2k17TeV.eps
+Comb2k113TeV.eps
+
+Kaons
+Comb2k27TeV.eps
+Comb2k313TeV.eps
+
+
+Protons
+Comb2k37TeV.eps
+Comb2k513TeV.eps
+
+
+
+CSoft  (put together)
+
+cCS7TeV.eps
+cCS13TeV.eps
+
+
+CHard  (put together)
+
+cCH7TeV.eps
+cCH13TeV.eps
+
+
+k-values  (put together)
+
+cCk7TeV.eps
+cCk13TeV.eps
+
+
+
+
+
+by Andreas Stokkeland
+Spring and Fall 2022
+Lund University.

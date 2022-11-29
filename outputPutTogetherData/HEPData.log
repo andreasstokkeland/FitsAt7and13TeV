@@ -1,0 +1,38 @@
+rm: *.so: No such file or directory
+rm: *.d: No such file or directory
+rm: *.pcm: No such file or directory
+   ------------------------------------------------------------------
+  | Welcome to ROOT 6.24/06                        https://root.cern |
+  | (c) 1995-2021, The ROOT Team; conception: R. Brun, F. Rademakers |
+  | Built for macosx64 on Feb 07 2022, 18:03:00                      |
+  | From tags/v6-24-06@v6-24-06                                      |
+  | With Apple clang version 13.0.0 (clang-1300.0.29.30)             |
+  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q'       |
+   ------------------------------------------------------------------
+
+ld: warning: dylib (/usr/local/opt/gcc/lib/gcc/11/libgfortran.5.dylib) was built for newer macOS version (11.5) than being linked (11.0)
+ld: warning: dylib (/usr/local/opt/gcc/lib/gcc/11/libquadmath.0.dylib) was built for newer macOS version (11.5) than being linked (11.0)
+ld: warning: dylib (/usr/local/opt/gcc/lib/gcc/11/libgfortran.5.dylib) was built for newer macOS version (11.5) than being linked (11.0)
+ld: warning: dylib (/usr/local/opt/gcc/lib/gcc/11/libquadmath.0.dylib) was built for newer macOS version (11.5) than being linked (11.0)
+I-TMacOSXSystem::ACLiC: creating shared library /Users/AndreasStokkkeland/Fits13TeV/outputStart/./HEPData_C.so
+Hej
+Hej
+Hej
+Hej4
+Hej5
+Hej51
+Hej52
+Hej52 0
+Hej52 1
+Hej52 2
+Hej52 3
+Hej52 4
+Hej52 5
+Hej52 6
+Hej52 7
+Hej52 8
+Hej52 9
+Hej6
+Hej7
+I-TCanvas::Print: eps file HEPDataFit.eps has been created
+The time of the code 12 s

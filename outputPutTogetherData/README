@@ -1,0 +1,245 @@
+
+aliroot is used to compile the code:
+https://alice-doc.github.io/alice-analysis-tutorial/building/
+
+A .root file can be wieved with the command
+root "file name".root
+
+where you inside of root write 
+TBrowser "your name for the browser (for example: a)" 
+
+
+
+An explanation of the different files
+
+Those starting with numbers between 11 to 19 and ending with .eps or .root are files with the put together data for pions at 7 Tev.
+Searched for with:
+ls 1*.eps
+ls 1*.root
+for multiplicity classes 1 to 9 
+and the 10th at
+ls 20.eps
+ls 20.root
+
+
+Those starting with numbers between 21 to 29 and ending with .eps or .root are files with the put together data for kaons at 7 Tev.
+Searched for with:
+ls 2*.eps
+ls 2*.root
+for multiplicity classes 1 to 9 
+and the 10th at
+ls 30.eps
+ls 30.root
+
+
+Those starting with numbers between 31 to 39 and ending with .eps or .root are files with the put together data for protons at 7 Tev.
+Searched for with:
+ls 3*.eps
+ls 3*.root
+for multiplicity classes 1 to 9 
+and the 10th at
+ls 40.eps
+ls 40.root
+
+
+Those starting with HEPData-ins and ending with .eps or .root are files with the put together data for 13 Tev.
+Searched for with:
+ls HEPData-ins*.eps
+ls HEPData-ins*.root
+
+
+
+
+Those starting with Tot and ending with .root are files with the min bias.
+Searched for with:
+ls Tot*.root
+
+For pions at 7 TeV
+Tot11.root.root 
+
+For kaons at 7 TeV   
+Tot21.root.root
+
+For protons at 7 TeV
+Tot31.root.root
+
+For pions at 13 TeV
+TotHEPData-ins1784041-v1-Table_1.rootHist1D_y1.root.root
+
+For kaons at 13 TeV
+TotHEPData-ins1784041-v1-Table_3.rootHist1D_y1.root.root
+
+For protons at 13 TeV
+TotHEPData-ins1784041-v1-Table_5.rootHist1D_y1.root.root
+
+
+
+
+Those starting with Div and then numbers between 11 to 19 and ending with .eps or .root are files with a multiplicity class over its min bias for pions at 7 Tev.
+Searched for with:
+ls Div1*.eps
+ls Div1*.root
+for multiplicity classes 1 to 9 
+and the 10th at
+ls Div20.eps
+ls Div20.root
+
+
+Those starting with Div and then numbers between 21 to 29 and ending with .eps or .root are files with a multiplicity class over its min bias for kaons at 7 Tev.
+Searched for with:
+ls Div2*.eps
+ls Div2*.root
+for multiplicity classes 1 to 9 
+and the 10th at
+ls Div30.eps
+ls Div30.root
+
+
+Those starting with Div and then numbers between 31 to 39 and ending with .eps or .root are files with a multiplicity class over its min bias for protons at 7 Tev.
+Searched for with:
+ls Div3*.eps
+ls Div3*.root
+for multiplicity classes 1 to 9 
+and the 10th at
+ls Div40.eps
+ls Div40.root
+
+
+Those starting with DivHEPData-ins and ending with .eps or .root are files with the put together data for 13 Tev.
+Searched for with:
+ls DivHEPData-ins*.eps
+ls DivHEPData-ins*.root
+
+Table_1
+Table_2
+are for pions, Table_2 having the lowest multiplicity
+
+Table_3
+Table_4 
+are for kaons, Table_4 having the lowest multiplicity
+
+Table_5
+Table_6
+are for protons, Table_6 having the lowest multiplicity
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The code
+
+
+Sum7TeV.C and Sum13TeV.C are run in jobSum.sh where the output can be put in jobSum.log
+./jobSum.sh >& jobSum.log &
+
+This creates the min biases filed as Tot*.root
+It also creates the file outputSum where the Tot*.root files are filed too but there in addition with Tot*.eps
+			outputSum/Tot*.eps
+			outputSum/Tot*.root
+
+
+
+
+Div7TeV.C and Div13TeV.C are run in jobDiv.sh where the output can be put in jobDiv.log
+./jobDiv.sh >& jobDiv.log &
+
+This creates the ratio between the multiplicity classes and their min biases filed as Div*.root   
+It also creates the file outputDiv where the ratios are filed too but there in addition with Div*.eps
+			outputDiv/Div*.eps
+			outputDiv/Div*.root
+
+In the outputDiv folder the Combined fits are made.
+
+
+
+
+AddingHistoTalkerWithFit7TeV.C and AddingHistoTalkerWithFit13TeV.C are run in jobAddingTalkerWithFit.sh where the output can be put in jobAddingTalkerWithFit.log
+./jobAddingTalkerWithFit.sh >& jobAddingTalkerWithFit.log &
+
+This code can add histograms together although it is rather done in HEPData.C (Run:   ./HEPData.sh >& HEPData.log & )
+It primarily makes Levi fits for the 1st to 9th multiplicity class.
+The fit parameters are then used in a function defined just before the first void.
+			This function takes a ratio between two Levi functions.
+			The upper is for different multiplicity classes 
+			and the lower is for their min bias.
+			These ratios are then plotted with the histograms from the Div*.root files.
+			
+			HEPDataKaonFitDiv7TeV.eps
+			HEPDataKaonFitDiv13TeV.eps
+
+			HEPDataPionFitDiv7TeV.eps
+			HEPDataPionFitDiv13TeV.eps
+
+			HEPDataProtonFitDiv7TeV.eps
+			HEPDataProtonFitDiv13TeV.eps
+
+The code also takes the n-values from the Levi function and prints them in .root files.
+These are then read by a second void in which the n1- and (n2-n1)-values that belong to the same center of mass energy, \sqrt{s} = (7 or 13) TeV, are plotted together.
+
+
+n1-values (separate)
+
+HEPDataPionN17TeV.eps
+HEPDataPionN113TeV.eps
+
+HEPDataKaonN17TeV.eps
+HEPDataKaonN113TeV.eps
+
+HEPDataProtonN17TeV.eps
+HEPDataProtonN113TeV.eps
+
+
+(n2-n1)-values (separate)
+
+HEPDataPionN127TeV.eps
+HEPDataPionN1213TeV.eps
+
+HEPDataKaonN127TeV.eps
+HEPDataKaonN1213TeV.eps
+
+HEPDataProtonN127TeV.eps
+HEPDataProtonN1213TeV.eps
+
+
+n1-values (together)
+
+cN17TeV.eps
+cN113TeV.eps
+
+
+(n2-n1)-values (together)
+
+cN127TeV.eps
+cN1213TeV.eps
+
+
+n2-values over their respective mass
+
+cN27TeV.eps
+cN213TeV.eps
+
+
+
+
+Runing the HEPData.C file creates the HEPData.eps file that has all the Div*.root files plotted together
+./HEPData.sh >& HEPData.log &
+
+
+
+
+
+by Andreas Stokkeland
+Spring and Fall 2022
+Lund University.
+

@@ -1,0 +1,665 @@
+rm: *.so: No such file or directory
+rm: *.d: No such file or directory
+rm: *.pcm: No such file or directory
+   ------------------------------------------------------------------
+  | Welcome to ROOT 6.24/06                        https://root.cern |
+  | (c) 1995-2021, The ROOT Team; conception: R. Brun, F. Rademakers |
+  | Built for macosx64 on Feb 07 2022, 18:03:00                      |
+  | From tags/v6-24-06@v6-24-06                                      |
+  | With Apple clang version 13.0.0 (clang-1300.0.29.30)             |
+  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q'       |
+   ------------------------------------------------------------------
+
+ld: warning: dylib (/usr/local/opt/gcc/lib/gcc/11/libgfortran.5.dylib) was built for newer macOS version (11.5) than being linked (11.0)
+ld: warning: dylib (/usr/local/opt/gcc/lib/gcc/11/libquadmath.0.dylib) was built for newer macOS version (11.5) than being linked (11.0)
+ld: warning: dylib (/usr/local/opt/gcc/lib/gcc/11/libgfortran.5.dylib) was built for newer macOS version (11.5) than being linked (11.0)
+ld: warning: dylib (/usr/local/opt/gcc/lib/gcc/11/libquadmath.0.dylib) was built for newer macOS version (11.5) than being linked (11.0)
+I-TMacOSXSystem::ACLiC: creating shared library /Users/AndreasStokkkeland/Fits13TeV/outputStart/./AddingHistoTalkerWithFit7TeV_C.so
+Pion fit #0
+I-TCanvas::MakeDefCanvas:  created default TCanvas with name c1
+ FCN=9.32003 FROM MIGRAD    STATUS=CONVERGED     230 CALLS         231 TOTAL
+                     EDM=3.9299e-08    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   1.69210e+01   2.90163e-01   2.26410e-04  -3.38044e-04
+   2  n            7.01278e+00   8.37948e-02   3.52442e-05   8.01390e-03
+   3  T            1.79530e-01   2.99419e-03   7.69981e-07  -2.18601e-01
+   4  mass         1.39570e-01     fixed    
+Pion fit #1
+ FCN=10.3799 FROM MIGRAD    STATUS=CONVERGED     227 CALLS         228 TOTAL
+                     EDM=5.92772e-08    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   1.33811e+01   2.15411e-01   1.74436e-04  -9.56322e-04
+   2  n            6.99266e+00   7.57590e-02   3.31595e-05  -7.32439e-03
+   3  T            1.71203e-01   2.65274e-03   7.25246e-07   9.36570e-02
+   4  mass         1.39570e-01     fixed    
+Pion fit #2
+ FCN=10.9754 FROM MIGRAD    STATUS=CONVERGED     227 CALLS         228 TOTAL
+                     EDM=9.8048e-10    STRATEGY= 1  ERROR MATRIX UNCERTAINTY   2.0 per cent
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   1.10839e+01   1.81851e-01   1.91923e-04  -3.27889e-04
+   2  n            6.96597e+00   7.26406e-02   2.38169e-05   2.45650e-06
+   3  T            1.64171e-01   2.52286e-03  -7.81932e-07   1.54074e-04
+   4  mass         1.39570e-01     fixed    
+Pion fit #3
+ FCN=9.96993 FROM MIGRAD    STATUS=CONVERGED     241 CALLS         242 TOTAL
+                     EDM=4.5114e-08    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   9.63210e+00   1.64152e-01   1.22563e-04  -1.50182e-03
+   2  n            6.94229e+00   7.14104e-02   3.01333e-05   9.11150e-03
+   3  T            1.58791e-01   2.47244e-03   6.62165e-07  -5.13674e-01
+   4  mass         1.39570e-01     fixed    
+Pion fit #4
+ FCN=8.85154 FROM MIGRAD    STATUS=CONVERGED     324 CALLS         325 TOTAL
+                     EDM=7.76622e-07    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   8.55468e+00   1.49276e-01   1.03096e-04   5.18036e-03
+   2  n            6.93904e+00   7.00947e-02   2.79063e-05  -2.42120e-02
+   3  T            1.54690e-01   2.41106e-03   6.33963e-07   5.12805e-01
+   4  mass         1.39570e-01     fixed    
+Pion fit #5
+ FCN=8.22061 FROM MIGRAD    STATUS=CONVERGED     267 CALLS         268 TOTAL
+                     EDM=4.52597e-10    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   7.34655e+00   1.32908e-01   8.56733e-05  -3.85937e-04
+   2  n            6.91705e+00   6.78751e-02   2.59380e-05   1.62541e-03
+   3  T            1.48941e-01   2.33038e-03   6.36283e-07  -6.79531e-02
+   4  mass         1.39570e-01     fixed    
+Pion fit #6
+ FCN=7.20636 FROM MIGRAD    STATUS=CONVERGED     227 CALLS         228 TOTAL
+                     EDM=1.93008e-11    STRATEGY= 1  ERROR MATRIX UNCERTAINTY   2.5 per cent
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   6.07308e+00   1.15772e-01   1.02033e-04  -2.60133e-05
+   2  n            6.90334e+00   6.58828e-02  -5.66363e-05  -2.22320e-04
+   3  T            1.41391e-01   2.23856e-03  -1.46388e-06   3.16882e-03
+   4  mass         1.39570e-01     fixed    
+Pion fit #7
+ FCN=7.61575 FROM MIGRAD    STATUS=CONVERGED     332 CALLS         333 TOTAL
+                     EDM=9.64954e-08    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   5.09681e+00   1.03520e-01   5.79054e-05   9.76114e-03
+   2  n            6.87750e+00   6.39468e-02   2.29499e-05  -1.93722e-02
+   3  T            1.33703e-01   2.15156e-03   6.42671e-07   9.31097e-01
+   4  mass         1.39570e-01     fixed    
+Pion fit #8
+ FCN=5.58625 FROM MIGRAD    STATUS=CONVERGED     308 CALLS         309 TOTAL
+                     EDM=1.47223e-08    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   4.00333e+00   1.02200e-01   4.38376e-05  -2.57331e-03
+   2  n            6.90291e+00   6.59948e-02   2.01865e-05   2.11520e-03
+   3  T            1.22903e-01   2.21215e-03   6.47438e-07  -2.36530e-01
+   4  mass         1.39570e-01     fixed    
+Pion fit #9
+ FCN=7.897 FROM MIGRAD    STATUS=CONVERGED     278 CALLS         279 TOTAL
+                     EDM=2.10225e-10    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   8.35697e+00   1.50386e-01   9.88801e-05  -7.92275e-05
+   2  n            6.89638e+00   7.26514e-02   2.76593e-05  -5.60884e-04
+   3  T            1.59060e-01   2.57998e-03   6.32230e-07   1.16727e-02
+   4  mass         1.39570e-01     fixed    
+Kaon fit #0
+ FCN=8.24229 FROM MIGRAD    STATUS=CONVERGED     145 CALLS         146 TOTAL
+                     EDM=2.98895e-08    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   2.76701e+00   4.14442e-02   5.05853e-05  -1.45455e-03
+   2  n            7.49695e+00   1.70225e-01   8.54470e-05   2.63124e-03
+   3  T            2.71254e-01   5.21117e-03   1.55868e-06  -1.90670e-01
+   4  mass         4.93677e-01     fixed    
+7.49695
+Kaon fit #1
+ FCN=7.57131 FROM MIGRAD    STATUS=CONVERGED     147 CALLS         148 TOTAL
+                     EDM=4.71123e-07    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   2.12676e+00   2.95697e-02   3.50424e-05   3.05729e-02
+   2  n            7.29228e+00   1.46128e-01   7.07768e-05  -1.50468e-02
+   3  T            2.54498e-01   4.54485e-03   1.36219e-06   9.34152e-01
+   4  mass         4.93677e-01     fixed    
+7.29228
+Kaon fit #2
+ FCN=6.36338 FROM MIGRAD    STATUS=CONVERGED     113 CALLS         114 TOTAL
+                     EDM=1.48952e-07    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   1.72008e+00   2.42984e-02   2.60843e-05   2.47046e-02
+   2  n            7.14647e+00   1.35770e-01   6.03533e-05  -9.95489e-03
+   3  T            2.41488e-01   4.31060e-03   1.20590e-06   5.23287e-01
+   4  mass         4.93677e-01     fixed    
+7.14647
+Kaon fit #3
+ FCN=5.96951 FROM MIGRAD    STATUS=CONVERGED     146 CALLS         147 TOTAL
+                     EDM=1.21037e-08    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   1.46315e+00   2.08345e-02   2.14484e-05   6.60135e-03
+   2  n            7.01952e+00   1.27184e-01   5.47644e-05  -1.98213e-03
+   3  T            2.31710e-01   4.12086e-03   1.13267e-06   6.39501e-02
+   4  mass         4.93677e-01     fixed    
+7.01952
+Kaon fit #4
+ FCN=4.47034 FROM MIGRAD    STATUS=CONVERGED     130 CALLS         131 TOTAL
+                     EDM=5.25797e-09    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   1.27791e+00   1.84331e-02   1.65759e-05   5.52060e-04
+   2  n            6.96243e+00   1.22235e-01   4.67583e-05  -6.00785e-04
+   3  T            2.24610e-01   3.97302e-03   9.79322e-07  -1.01182e-02
+   4  mass         4.93677e-01     fixed    
+6.96243
+Kaon fit #5
+ FCN=3.38909 FROM MIGRAD    STATUS=CONVERGED     213 CALLS         214 TOTAL
+                     EDM=3.68739e-09    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   1.06940e+00   1.57293e-02   1.23496e-05  -7.16417e-04
+   2  n            6.89887e+00   1.15842e-01   3.92713e-05  -1.41504e-03
+   3  T            2.15819e-01   3.80139e-03   8.38615e-07   7.32245e-02
+   4  mass         4.93677e-01     fixed    
+6.89887
+Kaon fit #6
+ FCN=2.43054 FROM MIGRAD    STATUS=CONVERGED     207 CALLS         208 TOTAL
+                     EDM=4.00606e-07    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   8.49672e-01   1.28899e-02   8.67776e-06   3.69261e-02
+   2  n            6.79531e+00   1.08204e-01   3.22827e-05  -2.42234e-02
+   3  T            2.03445e-01   3.58349e-03   7.07982e-07   1.08403e+00
+   4  mass         4.93677e-01     fixed    
+6.79531
+Kaon fit #7
+ FCN=2.39276 FROM MIGRAD    STATUS=CONVERGED     160 CALLS         161 TOTAL
+                     EDM=7.70727e-08    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   6.81694e-01   1.07755e-02   6.92888e-06  -1.87714e-02
+   2  n            6.68271e+00   1.01509e-01   2.96778e-05  -4.13151e-03
+   3  T            1.91415e-01   3.39224e-03   6.67522e-07   1.16485e-02
+   4  mass         4.93677e-01     fixed    
+6.68271
+Kaon fit #8
+ FCN=1649.62 FROM MIGRAD    STATUS=CONVERGED     391 CALLS         392 TOTAL
+                     EDM=1.3351e-07    STRATEGY= 1  ERROR MATRIX UNCERTAINTY   0.0 per cent
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   3.55947e-01   8.32867e-03  -6.05339e-06  -1.45804e-03
+   2  n           -6.87609e+07   1.41421e+00  -4.13853e-08   2.67514e-09
+   3  T            3.54936e-01   4.41054e-03   9.97091e-06   2.88610e-01
+   4  mass         4.93677e-01     fixed    
+-6.87609e+07
+Kaon fit #9
+ FCN=3.91331 FROM MIGRAD    STATUS=CONVERGED     149 CALLS         150 TOTAL
+                     EDM=4.86751e-08    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   1.26968e+00   1.88748e-02   1.60965e-05  -1.03304e-02
+   2  n            7.03765e+00   1.31963e-01   4.79125e-05   6.30795e-04
+   3  T            2.34712e-01   4.32043e-03   9.87441e-07  -1.44090e-01
+   4  mass         4.93677e-01     fixed    
+7.03765
+ FCN=1.17999 FROM MIGRAD    STATUS=CONVERGED     424 CALLS         425 TOTAL
+                     EDM=7.26347e-13    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   4.90843e-01   9.20172e-03   4.25031e-06  -1.33494e-05
+   2  n            6.66087e+00   9.94362e-02   2.28197e-05  -2.90074e-05
+   3  T            1.76375e-01   3.34177e-03   6.25597e-07   9.88427e-04
+   4  mass         4.93677e-01     fixed    
+Proton fit #0
+ FCN=13.8751 FROM MIGRAD    STATUS=CONVERGED     168 CALLS         169 TOTAL
+                     EDM=1.07445e-06    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   1.09860e+00   1.39792e-02   2.51122e-05   5.83402e-02
+   2  n            9.80816e+00   3.14551e-01   2.48757e-04  -4.61612e-03
+   3  T            3.42195e-01   6.12831e-03   2.68088e-06   7.58016e-01
+   4  mass         9.38272e-01     fixed    
+Proton fit #1
+ FCN=13.6822 FROM MIGRAD    STATUS=CONVERGED     243 CALLS         244 TOTAL
+                     EDM=1.98528e-08    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   8.73768e-01   1.06787e-02   1.87912e-05  -1.29706e-02
+   2  n            9.46678e+00   2.59832e-01   2.09260e-04  -9.33270e-04
+   3  T            3.14562e-01   5.24745e-03   2.41259e-06   7.38687e-02
+   4  mass         9.38272e-01     fixed    
+Proton fit #2
+ FCN=11.9054 FROM MIGRAD    STATUS=CONVERGED     350 CALLS         351 TOTAL
+                     EDM=9.52596e-07    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   7.19674e-01   8.91006e-03   1.44656e-05  -9.32773e-02
+   2  n            9.13593e+00   2.36707e-01   1.81749e-04   1.14989e-02
+   3  T            2.92421e-01   4.85402e-03   2.18523e-06  -1.08260e+00
+   4  mass         9.38272e-01     fixed    
+Proton fit #3
+ FCN=8.87462 FROM MIGRAD    STATUS=CONVERGED     254 CALLS         255 TOTAL
+                     EDM=9.19417e-10    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   6.21595e-01   7.81194e-03   1.09366e-05  -5.41193e-03
+   2  n            8.92141e+00   2.23346e-01   1.52742e-04   8.46979e-05
+   3  T            2.76139e-01   4.58913e-03   1.87875e-06  -3.81486e-03
+   4  mass         9.38272e-01     fixed    
+Proton fit #4
+ FCN=10.9187 FROM MIGRAD    STATUS=CONVERGED     348 CALLS         349 TOTAL
+                     EDM=2.24279e-07    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   5.48614e-01   6.99237e-03   1.06124e-05  -5.17280e-03
+   2  n            8.71577e+00   2.14417e-01   1.61701e-04  -5.86828e-03
+   3  T            2.63314e-01   4.40110e-03   2.02047e-06   4.97143e-01
+   4  mass         9.38272e-01     fixed    
+Proton fit #5
+ FCN=13.6628 FROM MIGRAD    STATUS=CONVERGED     607 CALLS         608 TOTAL
+                     EDM=4.3067e-08    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   4.64904e-01   6.04102e-03   9.93789e-06   4.80019e-02
+   2  n            8.30996e+00   1.84694e-01   1.54229e-04   5.29136e-04
+   3  T            2.45211e-01   4.04611e-03   2.10965e-06  -1.33355e-02
+   4  mass         9.38272e-01     fixed    
+Proton fit #6
+ FCN=8.93065 FROM MIGRAD    STATUS=CONVERGED     788 CALLS         789 TOTAL
+                     EDM=3.43823e-09    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   3.72986e-01   4.98618e-03   6.57982e-06  -1.88956e-02
+   2  n            8.23198e+00   1.80447e-01   1.26192e-04   3.66906e-04
+   3  T            2.28983e-01   3.78743e-03   1.68785e-06  -3.03938e-02
+   4  mass         9.38272e-01     fixed    
+Proton fit #7
+ FCN=6.25404 FROM MIGRAD    STATUS=CONVERGED     662 CALLS         663 TOTAL
+                     EDM=5.62993e-07    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   2.99456e-01   4.17282e-03   4.54534e-06   2.40236e-01
+   2  n            8.05343e+00   1.73362e-01   1.04479e-04   2.54433e-03
+   3  T            2.11484e-01   3.53460e-03   1.38754e-06  -1.24588e-01
+   4  mass         9.38272e-01     fixed    
+Proton fit #8
+ FCN=9.04571 FROM MIGRAD    STATUS=CONVERGED     614 CALLS         615 TOTAL
+                     EDM=4.20803e-09    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   2.15962e-01   3.46529e-03   4.10913e-06   3.22716e-02
+   2  n            7.59442e+00   1.48189e-01   1.01765e-04  -5.87915e-04
+   3  T            1.86172e-01   3.27711e-03   1.51047e-06   4.19076e-02
+   4  mass         9.38272e-01     fixed    
+Proton fit #9
+ FCN=7.53531 FROM MIGRAD    STATUS=CONVERGED     446 CALLS         447 TOTAL
+                     EDM=2.56229e-07    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   5.30997e-01   6.82476e-03   8.85279e-06   3.86001e-03
+   2  n            8.66068e+00   2.12894e-01   1.32907e-04   2.41961e-04
+   3  T            2.78383e-01   4.78225e-03   1.77942e-06   2.28670e-01
+   4  mass         9.38272e-01     fixed    
+Hej
+I-TCanvas::Print: eps file HEPDataPionFitDiv7TeV.eps has been created
+I-TCanvas::Print: eps file HEPDataPionN17TeV.eps has been created
+I-TH1D::SaveAs: ROOT file HEPDataN11.root has been created
+W-TFile::Append: Replacing existing TH1: Div (Potential memory leak).
+I-TCanvas::Print: eps file HEPDataPionN127TeV.eps has been created
+I-TH1D::SaveAs: ROOT file HEPDataN121.root has been created
+I-TH1F::SaveAs: ROOT file CN21.root has been created
+I-TCanvas::Print: eps file HEPDataKaonFitDiv7TeV.eps has been created
+W-TFile::Append: Replacing existing TH1: Div (Potential memory leak).
+I-TCanvas::Print: eps file HEPDataKaonN17TeV.eps has been created
+I-TH1D::SaveAs: ROOT file HEPDataN13.root has been created
+W-TFile::Append: Replacing existing TH1: Div (Potential memory leak).
+I-TCanvas::Print: eps file HEPDataKaonN127TeV.eps has been created
+I-TH1D::SaveAs: ROOT file HEPDataN123.root has been created
+W-TFile::Append: Replacing existing TH1: The_constant_k (Potential memory leak).
+I-TH1F::SaveAs: ROOT file CN23.root has been created
+I-TCanvas::Print: eps file HEPDataProtonFitDiv7TeV.eps has been created
+W-TFile::Append: Replacing existing TH1: Div (Potential memory leak).
+I-TCanvas::Print: eps file HEPDataProtonN17TeV.eps has been created
+I-TH1D::SaveAs: ROOT file HEPDataN15.root has been created
+W-TFile::Append: Replacing existing TH1: Div (Potential memory leak).
+I-TCanvas::Print: eps file HEPDataProtonN127TeV.eps has been created
+I-TH1D::SaveAs: ROOT file HEPDataN125.root has been created
+W-TFile::Append: Replacing existing TH1: The_constant_k (Potential memory leak).
+I-TH1F::SaveAs: ROOT file CN25.root has been created
+Hej
+Hej
+Hej
+Hej
+I-TCanvas::Print: eps file cN27TeV.eps has been created
+Hej
+Hej
+I-TCanvas::Print: eps file cN17TeV.eps has been created
+Hej
+I-TCanvas::Print: eps file cN127TeV.eps has been created
+   ------------------------------------------------------------------
+  | Welcome to ROOT 6.24/06                        https://root.cern |
+  | (c) 1995-2021, The ROOT Team; conception: R. Brun, F. Rademakers |
+  | Built for macosx64 on Feb 07 2022, 18:03:00                      |
+  | From tags/v6-24-06@v6-24-06                                      |
+  | With Apple clang version 13.0.0 (clang-1300.0.29.30)             |
+  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q'       |
+   ------------------------------------------------------------------
+
+ld: warning: dylib (/usr/local/opt/gcc/lib/gcc/11/libgfortran.5.dylib) was built for newer macOS version (11.5) than being linked (11.0)
+ld: warning: dylib (/usr/local/opt/gcc/lib/gcc/11/libquadmath.0.dylib) was built for newer macOS version (11.5) than being linked (11.0)
+ld: warning: dylib (/usr/local/opt/gcc/lib/gcc/11/libgfortran.5.dylib) was built for newer macOS version (11.5) than being linked (11.0)
+ld: warning: dylib (/usr/local/opt/gcc/lib/gcc/11/libquadmath.0.dylib) was built for newer macOS version (11.5) than being linked (11.0)
+I-TMacOSXSystem::ACLiC: creating shared library /Users/AndreasStokkkeland/Fits13TeV/outputStart/./AddingHistoTalkerWithFit13TeV_C.so
+Pion fit #0
+I-TCanvas::MakeDefCanvas:  created default TCanvas with name c1
+ FCN=13.7527 FROM MIGRAD    STATUS=CONVERGED     229 CALLS         230 TOTAL
+                     EDM=4.71825e-11    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   2.01874e+01   3.22786e-01   3.01438e-04  -1.00712e-05
+   2  n            6.86178e+00   7.52209e-02   3.64237e-05  -1.00499e-04
+   3  T            1.92080e-01   3.11855e-03   8.98076e-07   5.73216e-03
+   4  mass         1.39570e-01     fixed    
+Pion fit #1
+ FCN=13.3279 FROM MIGRAD    STATUS=CONVERGED     222 CALLS         223 TOTAL
+                     EDM=1.28422e-06    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   1.56596e+01   2.60787e-01   2.29270e-04   9.10138e-03
+   2  n            6.85599e+00   7.11382e-02   3.36803e-05  -8.77171e-02
+   3  T            1.82663e-01   2.93397e-03   8.33137e-07   3.38460e+00
+   4  mass         1.39570e-01     fixed    
+Pion fit #2
+ FCN=12.1281 FROM MIGRAD    STATUS=CONVERGED     217 CALLS         218 TOTAL
+                     EDM=3.72395e-08    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   1.28219e+01   2.22044e-01   1.79689e-04   1.39501e-03
+   2  n            6.83039e+00   6.86545e-02   3.09732e-05  -1.51978e-02
+   3  T            1.74732e-01   2.81409e-03   7.67057e-07   5.69373e-01
+   4  mass         1.39570e-01     fixed    
+Pion fit #3
+ FCN=11.4517 FROM MIGRAD    STATUS=CONVERGED     181 CALLS         182 TOTAL
+                     EDM=2.8357e-07    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   1.10638e+01   1.97822e-01   1.50422e-04   4.21477e-04
+   2  n            6.79515e+00   6.66799e-02   2.89880e-05  -1.95240e-02
+   3  T            1.68366e-01   2.72262e-03   7.19466e-07   8.78761e-01
+   4  mass         1.39570e-01     fixed    
+Pion fit #4
+ FCN=10.5548 FROM MIGRAD    STATUS=CONVERGED     245 CALLS         246 TOTAL
+                     EDM=5.5619e-08    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   9.77112e+00   1.79626e-01   1.28174e-04  -3.28841e-03
+   2  n            6.78032e+00   6.54185e-02   2.73258e-05   3.51732e-03
+   3  T            1.63498e-01   2.65598e-03   6.77691e-07  -2.52838e-01
+   4  mass         1.39570e-01     fixed    
+Pion fit #5
+ FCN=9.18304 FROM MIGRAD    STATUS=CONVERGED     236 CALLS         237 TOTAL
+                     EDM=2.62979e-09    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   8.28317e+00   1.57855e-01   1.02275e-04   9.65939e-04
+   2  n            6.77541e+00   6.32010e-02   2.47909e-05  -4.12408e-03
+   3  T            1.57434e-01   2.55805e-03   6.32872e-07   1.82387e-01
+   4  mass         1.39570e-01     fixed    
+Pion fit #6
+ FCN=8.84149 FROM MIGRAD    STATUS=CONVERGED     193 CALLS         194 TOTAL
+                     EDM=8.39835e-10    STRATEGY= 1  ERROR MATRIX UNCERTAINTY   2.3 per cent
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   6.76651e+00   1.35488e-01   4.81661e-05  -8.33740e-04
+   2  n            6.74978e+00   6.13474e-02  -3.88670e-05   2.90808e-03
+   3  T            1.49066e-01   2.44989e-03  -1.77517e-06  -1.36137e-01
+   4  mass         1.39570e-01     fixed    
+Pion fit #7
+ FCN=8.37507 FROM MIGRAD    STATUS=CONVERGED     293 CALLS         294 TOTAL
+                     EDM=1.31712e-07    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   5.56665e+00   1.17829e-01   6.64668e-05   6.78167e-03
+   2  n            6.74231e+00   5.97924e-02   2.20518e-05   2.53721e-03
+   3  T            1.41023e-01   2.34717e-03   6.39557e-07   3.63727e-01
+   4  mass         1.39570e-01     fixed    
+Pion fit #8
+ FCN=7.3441 FROM MIGRAD    STATUS=CONVERGED     308 CALLS         309 TOTAL
+                     EDM=4.22322e-10    STRATEGY= 1  ERROR MATRIX UNCERTAINTY   2.7 per cent
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   4.23109e+00   9.58568e-02   4.15341e-05  -5.75631e-04
+   2  n            6.76731e+00   5.62306e-02   5.13690e-05   2.18733e-03
+   3  T            1.29278e-01   2.12960e-03   9.30306e-07  -9.51325e-02
+   4  mass         1.39570e-01     fixed    
+Pion fit #9
+ FCN=11.1052 FROM MIGRAD    STATUS=CONVERGED     206 CALLS         207 TOTAL
+                     EDM=1.57324e-07    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   9.56359e+00   1.71083e-01   1.28912e-04   5.28661e-03
+   2  n            6.75034e+00   6.69974e-02   2.88804e-05  -2.98380e-02
+   3  T            1.69579e-01   2.78261e-03   7.27144e-07   1.27192e+00
+   4  mass         1.39570e-01     fixed    
+Kaon fit #0
+ FCN=14.7201 FROM MIGRAD    STATUS=CONVERGED     157 CALLS         158 TOTAL
+                     EDM=7.98051e-09    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   3.13419e+00   3.52496e-02   5.58015e-05  -7.16255e-04
+   2  n            6.97869e+00   1.21258e-01   8.12082e-05  -1.17843e-03
+   3  T            2.82999e-01   4.45909e-03   1.72112e-06   8.30117e-02
+   4  mass         4.93677e-01     fixed    
+Kaon fit #1
+ FCN=5.47648 FROM MIGRAD    STATUS=CONVERGED     161 CALLS         162 TOTAL
+                     EDM=4.38404e-08    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   2.55830e+00   2.94946e-02   2.85914e-05   1.23777e-02
+   2  n            7.05155e+00   1.15281e-01   4.80830e-05  -3.01351e-03
+   3  T            2.70330e-01   4.13073e-03   9.99102e-07   2.15468e-01
+   4  mass         4.93677e-01     fixed    
+Kaon fit #2
+ FCN=4.62125 FROM MIGRAD    STATUS=CONVERGED     362 CALLS         363 TOTAL
+                     EDM=9.927e-11    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   2.06088e+00   2.44330e-02   2.14681e-05   1.61479e-04
+   2  n            6.91412e+00   1.07200e-01   4.16259e-05  -1.47942e-04
+   3  T            2.55349e-01   3.90734e-03   8.94852e-07   1.16911e-02
+   4  mass         4.93677e-01     fixed    
+Kaon fit #3
+ FCN=4.51741 FROM MIGRAD    STATUS=CONVERGED     426 CALLS         427 TOTAL
+                     EDM=2.70376e-08    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   1.74629e+00   2.12429e-02   1.78953e-05  -4.74744e-03
+   2  n            6.81377e+00   1.01072e-01   3.76429e-05   6.58994e-03
+   3  T            2.44680e-01   3.75484e-03   8.34756e-07  -2.39694e-01
+   4  mass         4.93677e-01     fixed    
+Kaon fit #4
+ FCN=4.26245 FROM MIGRAD    STATUS=CONVERGED     485 CALLS         486 TOTAL
+                     EDM=2.01007e-08    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   1.51587e+00   1.87821e-02   1.52307e-05  -1.62918e-03
+   2  n            6.80315e+00   9.84663e-02   3.59973e-05  -1.03423e-03
+   3  T            2.38521e-01   3.66339e-03   8.03689e-07  -4.65355e-02
+   4  mass         4.93677e-01     fixed    
+Kaon fit #5
+ FCN=6.01941 FROM MIGRAD    STATUS=CONVERGED     238 CALLS         239 TOTAL
+                     EDM=1.02033e-08    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   1.25967e+00   1.59930e-02   1.46393e-05   2.89998e-03
+   2  n            6.72822e+00   9.39568e-02   4.01380e-05  -2.55058e-03
+   3  T            2.28477e-01   3.51097e-03   9.09103e-07   5.32039e-02
+   4  mass         4.93677e-01     fixed    
+Kaon fit #6
+ FCN=3.84439 FROM MIGRAD    STATUS=CONVERGED     292 CALLS         293 TOTAL
+                     EDM=3.55293e-10    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   9.91159e-01   1.30860e-02   9.65750e-06   2.76057e-03
+   2  n            6.62165e+00   8.83867e-02   3.15198e-05  -2.75667e-04
+   3  T            2.14615e-01   3.32740e-03   7.32311e-07   2.16469e-02
+   4  mass         4.93677e-01     fixed    
+Kaon fit #7
+ FCN=6.11713 FROM MIGRAD    STATUS=CONVERGED     418 CALLS         419 TOTAL
+                     EDM=9.67802e-08    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   7.83208e-01   1.07440e-02   9.34000e-06  -3.06774e-02
+   2  n            6.60444e+00   8.58291e-02   3.70524e-05   1.38738e-02
+   3  T            2.03856e-01   3.19663e-03   8.63037e-07  -4.74691e-01
+   4  mass         4.93677e-01     fixed    
+Kaon fit #8
+ FCN=5.49382 FROM MIGRAD    STATUS=CONVERGED     296 CALLS         297 TOTAL
+                     EDM=7.4601e-09    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   5.52596e-01   8.04559e-03   6.24253e-06  -2.35593e-02
+   2  n            6.51191e+00   7.74762e-02   3.14049e-05   3.53153e-03
+   3  T            1.85977e-01   2.88269e-03   7.45754e-07  -1.63939e-01
+   4  mass         4.93677e-01     fixed    
+Kaon fit #9
+ FCN=4.03381 FROM MIGRAD    STATUS=CONVERGED     193 CALLS         194 TOTAL
+                     EDM=3.45506e-08    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   1.48547e+00   1.79755e-02   1.47368e-05  -9.81184e-03
+   2  n            6.75384e+00   1.02037e-01   3.74697e-05   7.68209e-03
+   3  T            2.47140e-01   3.86341e-03   8.44957e-07  -3.22228e-01
+   4  mass         4.93677e-01     fixed    
+Proton fit #0
+ FCN=12.28 FROM MIGRAD    STATUS=CONVERGED     155 CALLS         156 TOTAL
+                     EDM=1.98857e-07    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   1.36626e+00   2.04482e-02   3.25693e-05  -2.38104e-02
+   2  n            1.05865e+01   4.34414e-01   2.63233e-04  -4.66211e-04
+   3  T            3.83450e-01   7.58801e-03   2.38185e-06   1.15018e-01
+   4  mass         9.38272e-01     fixed    
+Proton fit #1
+ FCN=10.0648 FROM MIGRAD    STATUS=CONVERGED     175 CALLS         176 TOTAL
+                     EDM=1.9056e-07    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   1.06282e+00   1.63139e-02   2.30298e-05  -4.12971e-02
+   2  n            9.79078e+00   3.32741e-01   1.84995e-04   9.48711e-04
+   3  T            3.44426e-01   6.61455e-03   1.98197e-06  -9.77026e-02
+   4  mass         9.38272e-01     fixed    
+Proton fit #2
+ FCN=10.869 FROM MIGRAD    STATUS=CONVERGED     267 CALLS         268 TOTAL
+                     EDM=5.2367e-10    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   8.69129e-01   1.36706e-02   1.95936e-05   1.16686e-03
+   2  n            9.16487e+00   2.81751e-01   1.63020e-04   1.74386e-06
+   3  T            3.15703e-01   6.11451e-03   1.97341e-06  -6.80276e-03
+   4  mass         9.38272e-01     fixed    
+Proton fit #3
+ FCN=10.2744 FROM MIGRAD    STATUS=CONVERGED     263 CALLS         264 TOTAL
+                     EDM=8.04787e-11    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   7.47255e-01   1.20086e-02   1.64009e-05  -2.83346e-04
+   2  n            8.77471e+00   2.50028e-01   1.40569e-04  -6.70548e-05
+   3  T            2.94737e-01   5.70057e-03   1.83371e-06   6.92427e-03
+   4  mass         9.38272e-01     fixed    
+Proton fit #4
+ FCN=8.94289 FROM MIGRAD    STATUS=CONVERGED     492 CALLS         493 TOTAL
+                     EDM=9.82863e-10    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   6.56256e-01   1.07506e-02   1.35764e-05  -1.98228e-03
+   2  n            8.55520e+00   2.30719e-01   1.22648e-04   3.80734e-04
+   3  T            2.80016e-01   5.41555e-03   1.67688e-06  -3.61191e-02
+   4  mass         9.38272e-01     fixed    
+Proton fit #5
+ FCN=8.43299 FROM MIGRAD    STATUS=CONVERGED     293 CALLS         294 TOTAL
+                     EDM=8.97076e-10    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   5.51154e-01   9.24810e-03   1.11257e-05   3.06264e-03
+   2  n            8.21697e+00   2.01852e-01   1.06395e-04  -7.01147e-05
+   3  T            2.60527e-01   4.98860e-03   1.57036e-06   1.86073e-02
+   4  mass         9.38272e-01     fixed    
+Proton fit #6
+ FCN=8.0229 FROM MIGRAD    STATUS=CONVERGED     374 CALLS         375 TOTAL
+                     EDM=1.22506e-06    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   4.39267e-01   7.62250e-03   8.74966e-06  -2.03919e-01
+   2  n            7.99126e+00   1.83860e-01   9.56441e-05   1.65104e-02
+   3  T            2.39265e-01   4.60873e-03   1.47518e-06  -1.38806e+00
+   4  mass         9.38272e-01     fixed    
+Proton fit #7
+ FCN=7.83115 FROM MIGRAD    STATUS=CONVERGED     284 CALLS         285 TOTAL
+                     EDM=3.18138e-07    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   3.50100e-01   6.31812e-03   6.95027e-06  -4.13626e-03
+   2  n            7.77520e+00   1.68249e-01   8.76271e-05  -1.07377e-02
+   3  T            2.20113e-01   4.25943e-03   1.40156e-06   6.31014e-01
+   4  mass         9.38272e-01     fixed    
+Proton fit #8
+ FCN=8.21036 FROM MIGRAD    STATUS=CONVERGED     317 CALLS         318 TOTAL
+                     EDM=1.18534e-09    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   2.46783e-01   4.70096e-03   5.00959e-06   1.13743e-02
+   2  n            7.32000e+00   1.39724e-01   7.47022e-05  -8.98566e-04
+   3  T            1.91355e-01   3.69533e-03   1.31073e-06   4.96346e-02
+   4  mass         9.38272e-01     fixed    
+Proton fit #9
+ FCN=9.99967 FROM MIGRAD    STATUS=CONVERGED     262 CALLS         263 TOTAL
+                     EDM=1.75194e-10    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  norm (dN/dy)   6.39453e-01   1.02209e-02   1.38853e-05   8.60777e-04
+   2  n            8.73898e+00   2.53617e-01   1.41845e-04  -1.92729e-04
+   3  T            3.02886e-01   5.98447e-03   1.88904e-06   1.58071e-02
+   4  mass         9.38272e-01     fixed    
+Hej
+I-TCanvas::Print: eps file HEPDataPionFitDiv13TeV.eps has been created
+I-TCanvas::Print: eps file HEPDataPionN113TeV.eps has been created
+I-TH1D::SaveAs: ROOT file HEPDataN11.root has been created
+W-TFile::Append: Replacing existing TH1: Div (Potential memory leak).
+I-TCanvas::Print: eps file HEPDataPionN1213TeV.eps has been created
+I-TH1D::SaveAs: ROOT file HEPDataN121.root has been created
+I-TH1F::SaveAs: ROOT file CN21.root has been created
+I-TCanvas::Print: eps file HEPDataKaonFitDiv13TeV.eps has been created
+W-TFile::Append: Replacing existing TH1: Div (Potential memory leak).
+I-TCanvas::Print: eps file HEPDataKaonN113TeV.eps has been created
+I-TH1D::SaveAs: ROOT file HEPDataN13.root has been created
+W-TFile::Append: Replacing existing TH1: Div (Potential memory leak).
+I-TCanvas::Print: eps file HEPDataKaonN1213TeV.eps has been created
+I-TH1D::SaveAs: ROOT file HEPDataN123.root has been created
+W-TFile::Append: Replacing existing TH1: The_constant_k (Potential memory leak).
+I-TH1F::SaveAs: ROOT file CN23.root has been created
+I-TCanvas::Print: eps file HEPDataProtonFitDiv13TeV.eps has been created
+W-TFile::Append: Replacing existing TH1: Div (Potential memory leak).
+I-TCanvas::Print: eps file HEPDataProtonN113TeV.eps has been created
+I-TH1D::SaveAs: ROOT file HEPDataN15.root has been created
+W-TFile::Append: Replacing existing TH1: Div (Potential memory leak).
+I-TCanvas::Print: eps file HEPDataProtonN1213TeV.eps has been created
+I-TH1D::SaveAs: ROOT file HEPDataN125.root has been created
+W-TFile::Append: Replacing existing TH1: The_constant_k (Potential memory leak).
+I-TH1F::SaveAs: ROOT file CN25.root has been created
+Hej
+Hej
+Hej
+W-TFile::Append: Replacing existing TH1: Theconstantk (Potential memory leak).
+Hej
+I-TCanvas::Print: eps file cN213TeV.eps has been created
+Hej
+Hej
+I-TCanvas::Print: eps file cN113TeV.eps has been created
+Hej
+I-TCanvas::Print: eps file cN1213TeV.eps has been created
+The time of the code 20 s

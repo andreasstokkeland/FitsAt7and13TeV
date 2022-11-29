@@ -1,0 +1,50 @@
+
+
+
+
+aliroot is used to compile the code:
+https://alice-doc.github.io/alice-analysis-tutorial/building/
+
+A .root file can be wieved with the command
+root "file name".root
+
+where you inside of root write
+TBrowser "your name for the browser (for example: a)"
+
+
+
+
+
+
+
+
+Here the data files from HEPData...
+
+... at 7 TeV; https://www.hepdata.net/record/ins1684320 
+HEPData-ins1684320-v1-root.root
+
+... at 13 TeV; https://www.hepdata.net/record/ins1784041
+HEPData-ins1784041-v1-Table_1.root
+HEPData-ins1784041-v1-Table_2.root
+HEPData-ins1784041-v1-Table_3.root
+HEPData-ins1784041-v1-Table_4.root
+HEPData-ins1784041-v1-Table_5.root
+HEPData-ins1784041-v1-Table_6.root
+
+are used as input to 
+PutTogetherData7TeV.C
+PutTogetherData13TeV.C
+
+job.sh is a script that runs the .C files and the output can be put into (>&) job.log.
+
+Personally I prefer to run it with
+./job.sh >& job.log &
+
+
+
+
+by Andreas Stokkeland
+Spring and Fall 2022
+Lund University.
+
+
