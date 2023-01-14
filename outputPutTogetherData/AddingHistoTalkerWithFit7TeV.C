@@ -61,8 +61,8 @@ Double_t FuncDiver(Double_t *x, Double_t *p)
 
 void AddingHistoTalker() {
 
-    //gStyle->SetPadGridX("True");
-    //gStyle->SetPadGridY("True");
+    gStyle->SetPadGridX("True");
+    gStyle->SetPadGridY("True");
 
     TH1D **HistosPion;
     HistosPion = new TH1D*[10];
@@ -473,15 +473,15 @@ void AddingHistoTalker() {
     
     
     
-    
-    TH1F* Ck1 = new TH1F( "The_constant_k" , "The constant k-value over mass", 2, 0, 1)    ;
-
-    Ck1 ->SetBinContent(1, funcsPion[9]->GetParameter(1) );
-    Ck1 ->SetBinError(1, funcsPion[9]->GetParError(1) );
-    
-    Ck1 -> SaveAs(Form( "CN2%d.root", 1));
-
-    
+//
+//    TH1F* Ck1 = new TH1F( "The_constant_k" , "The constant k-value over mass", 2, 0, 1)    ;
+//
+//    Ck1 ->SetBinContent(1, funcsPion[9]->GetParameter(1) );
+//    Ck1 ->SetBinError(1, funcsPion[9]->GetParError(1) );
+//
+//    Ck1 -> SaveAs(Form( "CN2%d.root", 1));
+//
+//
     
     
     
@@ -586,16 +586,16 @@ void AddingHistoTalker() {
     
     
     
-    
-    TH1F* Ck3 = new TH1F( "The_constant_k" , "The constant n2-value", 2, 0, 1)    ;
-
-    Ck3 ->SetBinContent(1, funcsKaon[9]->GetParameter(1) );
-    Ck3 ->SetBinError(1, funcsKaon[9]->GetParError(1) );
-    
-    Ck3 -> SaveAs(Form( "CN2%d.root", 3));
-
-    
-    
+//
+//    TH1F* Ck3 = new TH1F( "The_constant_k" , "The constant n2-value", 2, 0, 1)    ;
+//
+//    Ck3 ->SetBinContent(1, funcsKaon[9]->GetParameter(1) );
+//    Ck3 ->SetBinError(1, funcsKaon[9]->GetParError(1) );
+//
+//    Ck3 -> SaveAs(Form( "CN2%d.root", 3));
+//
+//
+//
     
     
     
@@ -699,15 +699,37 @@ void AddingHistoTalker() {
     
     
     
-    
-    
-    
-    TH1F* Ck5 = new TH1F( "The_constant_k" , "The constant n2-value", 2, 0, 1)    ;
+    double MassesGeV[3] = {0.1396, 0.4937, 0.9383}; //{pion#pm, kaon#pm, proton} // in GeV
 
-    Ck5 ->SetBinContent(1, funcsProton[9]->GetParameter(1) );
-    Ck5 ->SetBinError(1, funcsProton[9]->GetParError(1) );
     
-    Ck5 -> SaveAs(Form( "CN2%d.root", 5));
+    TH1D* hCk1 = new TH1D( "Theconstantk" , "The n2-values over their particles' mass at #sqrt{s} = 7 TeV", 3, 0, 3)    ;
+    TH1D* hCk2 = new TH1D( "Theconstantk" , "The n2-values over their particles' mass at #sqrt{s} = 7 TeV", 3, 0, 3)    ;
+    TH1D* hCk3 = new TH1D( "Theconstantk" , "The n2-values over their particles' mass at #sqrt{s} = 7 TeV", 3, 0, 3)    ;
+
+    hCk1 ->SetBinContent(1, funcsPion[9]->GetParameter(1)/MassesGeV[0] );
+    hCk1 ->SetBinError(1, funcsPion[9]->GetParError(1)/MassesGeV[0] );
+
+    hCk2 ->SetBinContent(2, funcsKaon[9]->GetParameter(1)/MassesGeV[1] );
+    hCk2 ->SetBinError(2, funcsKaon[9]->GetParError(1)/MassesGeV[1] );
+
+    hCk3 ->SetBinContent(3, funcsProton[9]->GetParameter(1)/MassesGeV[2] );
+    hCk3 ->SetBinError(3, funcsProton[9]->GetParError(1)/MassesGeV[2] );
+
+    hCk1 -> SaveAs(Form( "CN2%d.root", 1));
+    
+    hCk2 -> SaveAs(Form( "CN2%d.root", 3));
+    
+    hCk3 -> SaveAs(Form( "CN2%d.root", 5));
+    
+    
+    
+//
+//    TH1F* Ck5 = new TH1F( "The_constant_k" , "The constant n2-value", 2, 0, 1)    ;
+//
+//    Ck5 ->SetBinContent(1, funcsProton[9]->GetParameter(1) );
+//    Ck5 ->SetBinError(1, funcsProton[9]->GetParError(1) );
+//
+//    Ck5 -> SaveAs(Form( "CN2%d.root", 5));
     
     
 }
@@ -749,7 +771,7 @@ void AddingHistos(){
         
         //Files with n2
         TFile* fileCk = TFile::Open(Form("CN2%d.root", Table[i]  ));
-        HistosCk[i] = (TH1D*)fileCk->Get("The_constant_k");
+        HistosCk[i] = (TH1D*)fileCk->Get("Theconstantk");
         
         
         
@@ -767,54 +789,78 @@ void AddingHistos(){
     cout << "Hej" << endl;
 
     
-    double MassesGeV[3] = {0.1396, 0.4937, 0.9383}; //{pion#pm, kaon#pm, proton} // in GeV
     
-    TH1D* hCk = new TH1D( "Theconstantk" , "The n2-values over their particles mass at #sqrt{s} = 7 TeV", 3, 0.5, 2.5)    ;
+    
+    
+    
+    float SIZE = 0.06;
+
+    float SIZEOffset = 0.82;
+
+    
+    
+    
+    TCanvas *cCk = new TCanvas("cCk", "The constant k-value over each particles mass");
+
+        
+    //TH1D* hCk = new TH1D( "Theconstantk" , "The n2-values over their particles mass at #sqrt{s} = 7 TeV", 3, 0, 3)    ;
 
     cout << "Hej" << endl;
 
+    int Color[3] = {4,632-2,2};
+
+    
     
     for (int i = 0 ; i < 3; i++){
 
-        hCk ->SetBinContent(i+1, HistosCk[i]->GetBinContent(1) /MassesGeV[i] );
-        hCk ->SetBinError(i+1, HistosCk[i]->GetBinError(1) /MassesGeV[i] );
-    }
-    
-    hCk ->GetXaxis() ->SetBinLabel(1, "#pi#pm");
-    hCk ->GetXaxis() ->SetBinLabel(2, "K#pm");
-    hCk ->GetXaxis() ->SetBinLabel(3, "p(#bar{p})");
+        HistosCk[i] ->GetXaxis() ->SetBinLabel(1, "#pi^{#pm}");
+        HistosCk[i] ->GetXaxis() ->SetBinLabel(2, "K^{#pm}");
+        HistosCk[i] ->GetXaxis() ->SetBinLabel(3, "p(#bar{p})");
+        HistosCk[i] ->GetXaxis() ->SetLabelSize(0.1);
+        HistosCk[i] ->SetMaximum( 51 );
+        HistosCk[i] ->SetMinimum( 7);
+        HistosCk[i] ->SetLineWidth(2);
+        HistosCk[i] ->SetStats(0);
+        HistosCk[i] ->GetYaxis()->SetTitle("n2-value/mass (1/GeV)");
 
-    hCk ->GetXaxis() ->SetLabelSize(0.1);
-    
-    
-    TH1D* hCk1 = new TH1D( "Theconstantk1" , "The n2-values over their particles mass", 3, 0.5, 2.5)    ;
-    
-    for (int i = 0 ; i < 3; i++){
-        hCk1 ->SetBinContent(i+1, HistosCk[i]->GetBinContent(1) );
-        hCk1 ->SetBinError(i+1, HistosCk[i]->GetBinError(1) );
+        
+        HistosCk[i]->SetLineColor( Color[i] );
+        HistosCk[i]->Draw("sames");
+
+        HistosCk[i] ->GetYaxis()->SetTitleSize(SIZE);
+        HistosCk[i] ->GetYaxis()->SetTitleOffset(SIZEOffset-0.05);
+
+        
+        
+        
+//        hCk ->SetBinContent(i+1, HistosCk[i]->GetBinContent(1) /MassesGeV[i] );
+//        hCk ->SetBinError(i+1, HistosCk[i]->GetBinError(1) /MassesGeV[i] );
+        
+        
         
     }
     
     
-    cout << "Hej" << endl;
-
-    TCanvas *cCk = new TCanvas("cCk", "The constant k-value over each particles mass");
-    
-    hCk->SetMaximum( 51 );
-    hCk->SetMinimum( 7);
-    
-    hCk->Draw("sames");
-    hCk->SetStats(0);
-
-    hCk ->GetYaxis()->SetTitle("n2-value/mass (1/GeV)");
-
-    
     cCk -> SaveAs("cN27TeV.eps");
+
+    
+    
+//    TH1D* hCk1 = new TH1D( "Theconstantk1" , "The n2-values over their particles mass", 3, 0.5, 2.5)    ;
+//
+//    for (int i = 0 ; i < 3; i++){
+//        hCk1 ->SetBinContent(i+1, HistosCk[i]->GetBinContent(1) );
+//        hCk1 ->SetBinError(i+1, HistosCk[i]->GetBinError(1) );
+//
+//    }
+//
+    
     cout << "Hej" << endl;
+
+
     
 
-    int Color[3] = {4,632-2,2};
     
+        
     TCanvas *cCH = new TCanvas("cN1", "n1-values for each multiplicity at #sqrt{s} = 7 TeV");
     cout << "Hej" << endl;
 
@@ -826,36 +872,45 @@ void AddingHistos(){
         HistosCH[i]->SetMaximum( ((HistosCH[2]-> GetBinContent(1)) + (HistosCH[2]-> GetBinError(1)))*(1.05) );
         HistosCH[i]->SetMinimum(  ( (HistosCH[0]-> GetBinContent( HistosCH[0]-> GetNbinsX() ) ) - (HistosCH[0]-> GetBinError( HistosCH[0]-> GetNbinsX())) ) *(0.95) );
         
-        HistosCH[i] ->SetLineWidth(1);
+        HistosCH[i] ->SetLineWidth(2);
         HistosCH[i]->SetLineColor( Color[i] );
         HistosCH[i]->Draw("sames");
         HistosCH[i]->SetStats(0);
         
-        HistosCH[i]->SetTitle( "n1-values for each multiplicity at #sqrt{s} = 7 TeV" );
+        HistosCH[i]->SetTitle( "n1-values for each multiplicity class at #sqrt{s} = 7 TeV" );
+        
+        
+        HistosCH[i] -> GetYaxis()->SetTitle("n1-values");
+        
+        HistosCH[i] ->GetYaxis()->SetTitleSize(SIZE);
+        HistosCH[i] ->GetYaxis()->SetTitleOffset(SIZEOffset);
+        
+        
         
     }
     
     auto legendH = new TLegend(0.65, 0.65, 0.9, 0.9); //(start from left, start from bottom ) //x1,y1,x2,y2
     legendH->SetHeader("Particles","C"); // option "C" allows to center the header
-    legendH->AddEntry(HistosCH[0], "#pi#pm","l");
-    legendH->AddEntry(HistosCH[1], "K#pm","l");
+    legendH->AddEntry(HistosCH[0], "#pi^{#pm}","l");
+    legendH->AddEntry(HistosCH[1], "K^{#pm}","l");
     legendH->AddEntry(HistosCH[2], "p(#bar{p})","l");
 
     legendH->Draw();
     
-    TLatex *lkNameleft = new TLatex(0.1, 0.025, Form("#color[1]{%s}", "High multiplicity" ) );
+    TLatex *lkNameleft = new TLatex(0.1, 0.02, Form("#color[1]{%s}", "High multiplicity" ) );
 
 
     lkNameleft->SetNDC();
-    lkNameleft->SetTextSize(0.03);
+    lkNameleft->SetTextSize(0.05);
     lkNameleft->Draw();
     
-    TLatex *lkNameright = new TLatex(0.75, 0.025, Form("#color[1]{%s}", "Low multiplicity" ) );
+    TLatex *lkNameright = new TLatex(0.65, 0.02, Form("#color[1]{%s}", "Low multiplicity" ) );
 
 
     lkNameright->SetNDC();
-    lkNameright->SetTextSize(0.03);
+    lkNameright->SetTextSize(0.05);
     lkNameright->Draw();
+
 
          
     cCH -> SaveAs("cN17TeV.eps");
@@ -875,13 +930,18 @@ void AddingHistos(){
         HistosCS[i]->SetMinimum( ((HistosCS[2]-> GetBinContent(1)) - (HistosCS[2]-> GetBinError(1)))*(1.05)   );
 
 
-        HistosCS[i] ->SetLineWidth(1);
+        HistosCS[i] ->SetLineWidth(2);
         HistosCS[i]->SetLineColor( Color[i] );
         HistosCS[i]->Draw("sames");
         HistosCS[i]->SetStats(0);
         
-        HistosCS[i]->SetTitle( "(n2-n1)-values for each multiplicity at #sqrt{s} = 7 TeV" );
+        HistosCS[i]->SetTitle( "(n2-n1)-values for each multiplicity class at #sqrt{s} = 7 TeV" );
         
+        HistosCS[i] -> GetYaxis()->SetTitle("(n2-n1)-values");
+        
+        HistosCS[i] ->GetYaxis()->SetTitleSize(SIZE);
+        HistosCS[i] ->GetYaxis()->SetTitleOffset(SIZEOffset);
+
         
         
     }
@@ -890,24 +950,24 @@ void AddingHistos(){
     
     auto legendS = new TLegend(0.65, 0.15, 0.9, 0.4); //(start from left, start from bottom ) //x1,y1,x2,y2
     legendS->SetHeader("Particles","C"); // option "C" allows to center the header
-    legendS->AddEntry(HistosCS[0], "#pi#pm","l");
-    legendS->AddEntry(HistosCS[1], "K#pm","l");
+    legendS->AddEntry(HistosCS[0], "#pi^{#pm}","l");
+    legendS->AddEntry(HistosCS[1], "K^{#pm}","l");
     legendS->AddEntry(HistosCS[2], "p(#bar{p})","l");
 
     legendS->Draw();
 
-    TLatex *lkNameleft2 = new TLatex(0.1, 0.025, Form("#color[1]{%s}", "High multiplicity" ) );
+    TLatex *lkNameleft2 = new TLatex(0.1, 0.02, Form("#color[1]{%s}", "High multiplicity" ) );
 
 
     lkNameleft2->SetNDC();
-    lkNameleft2->SetTextSize(0.03);
+    lkNameleft2->SetTextSize(0.05);
     lkNameleft2->Draw();
     
-    TLatex *lkNameright2 = new TLatex(0.75, 0.025, Form("#color[1]{%s}", "Low multiplicity" ) );
+    TLatex *lkNameright2 = new TLatex(0.65, 0.02, Form("#color[1]{%s}", "Low multiplicity" ) );
 
 
     lkNameright2->SetNDC();
-    lkNameright2->SetTextSize(0.03);
+    lkNameright2->SetTextSize(0.05);
     lkNameright2->Draw();
 
     

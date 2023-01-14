@@ -16,7 +16,7 @@ ld: warning: dylib (/usr/local/Cellar/gcc@11/11.3.0/lib/gcc/11/libquadmath.0.dyl
 ld: warning: dylib (/usr/local/Cellar/gcc@11/11.3.0/lib/gcc/11/libgfortran.5.dylib) was built for newer macOS version (11.5) than being linked (11.0)
 ld: warning: dylib (/usr/local/Cellar/gcc@11/11.3.0/lib/gcc/11/libgcc_s.1.dylib) was built for newer macOS version (11.5) than being linked (11.0)
 ld: warning: dylib (/usr/local/Cellar/gcc@11/11.3.0/lib/gcc/11/libquadmath.0.dylib) was built for newer macOS version (11.5) than being linked (11.0)
-I-TMacOSXSystem::ACLiC: creating shared library /Users/AndreasStokkkeland/FitsAt7and13TeV/outputPutTogetherData/./AddingHistoTalkerWithFit7TeV_C.so
+I-TMacOSXSystem::ACLiC: creating shared library /Users/AndreasStokkkeland/FitsAt7and13TeV/outputPutTogetherData/./MButanfits_C.so
 Pion fit #0
 I-TCanvas::MakeDefCanvas:  created default TCanvas with name c1
  FCN=9.32003 FROM MIGRAD    STATUS=CONVERGED     230 CALLS         231 TOTAL
@@ -306,59 +306,7 @@ Proton fit #9
    2  n            8.66068e+00   2.12894e-01   1.32907e-04   2.41961e-04
    3  T            2.78383e-01   4.78225e-03   1.77942e-06   2.28670e-01
    4  mass         9.38272e-01     fixed    
-Hej
-I-TCanvas::Print: eps file HEPDataPionFitDiv7TeV.eps has been created
-I-TCanvas::Print: eps file HEPDataPionN17TeV.eps has been created
-I-TH1D::SaveAs: ROOT file HEPDataN11.root has been created
-W-TFile::Append: Replacing existing TH1: Div (Potential memory leak).
-I-TCanvas::Print: eps file HEPDataPionN127TeV.eps has been created
-I-TH1D::SaveAs: ROOT file HEPDataN121.root has been created
-I-TCanvas::Print: eps file HEPDataKaonFitDiv7TeV.eps has been created
-W-TFile::Append: Replacing existing TH1: Div (Potential memory leak).
-I-TCanvas::Print: eps file HEPDataKaonN17TeV.eps has been created
-I-TH1D::SaveAs: ROOT file HEPDataN13.root has been created
-W-TFile::Append: Replacing existing TH1: Div (Potential memory leak).
-I-TCanvas::Print: eps file HEPDataKaonN127TeV.eps has been created
-I-TH1D::SaveAs: ROOT file HEPDataN123.root has been created
-I-TCanvas::Print: eps file HEPDataProtonFitDiv7TeV.eps has been created
-W-TFile::Append: Replacing existing TH1: Div (Potential memory leak).
-I-TCanvas::Print: eps file HEPDataProtonN17TeV.eps has been created
-I-TH1D::SaveAs: ROOT file HEPDataN15.root has been created
-W-TFile::Append: Replacing existing TH1: Div (Potential memory leak).
-I-TCanvas::Print: eps file HEPDataProtonN127TeV.eps has been created
-I-TH1D::SaveAs: ROOT file HEPDataN125.root has been created
-W-TFile::Append: Replacing existing TH1: Theconstantk (Potential memory leak).
- <message repeated 1 time>
-I-TH1D::SaveAs: ROOT file CN21.root has been created
-I-TH1D::SaveAs: ROOT file CN23.root has been created
-I-TH1D::SaveAs: ROOT file CN25.root has been created
-Hej
-Hej
-Hej
-I-TCanvas::Print: eps file cN27TeV.eps has been created
-Hej
-Hej
-I-TCanvas::Print: eps file cN17TeV.eps has been created
-Hej
-I-TCanvas::Print: eps file cN127TeV.eps has been created
-   ------------------------------------------------------------------
-  | Welcome to ROOT 6.24/06                        https://root.cern |
-  | (c) 1995-2021, The ROOT Team; conception: R. Brun, F. Rademakers |
-  | Built for macosx64 on Feb 07 2022, 18:03:00                      |
-  | From tags/v6-24-06@v6-24-06                                      |
-  | With Apple clang version 13.0.0 (clang-1300.0.29.30)             |
-  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q'       |
-   ------------------------------------------------------------------
-
-ld: warning: dylib (/usr/local/Cellar/gcc@11/11.3.0/lib/gcc/11/libgfortran.5.dylib) was built for newer macOS version (11.5) than being linked (11.0)
-ld: warning: dylib (/usr/local/Cellar/gcc@11/11.3.0/lib/gcc/11/libgcc_s.1.dylib) was built for newer macOS version (11.5) than being linked (11.0)
-ld: warning: dylib (/usr/local/Cellar/gcc@11/11.3.0/lib/gcc/11/libquadmath.0.dylib) was built for newer macOS version (11.5) than being linked (11.0)
-ld: warning: dylib (/usr/local/Cellar/gcc@11/11.3.0/lib/gcc/11/libgfortran.5.dylib) was built for newer macOS version (11.5) than being linked (11.0)
-ld: warning: dylib (/usr/local/Cellar/gcc@11/11.3.0/lib/gcc/11/libgcc_s.1.dylib) was built for newer macOS version (11.5) than being linked (11.0)
-ld: warning: dylib (/usr/local/Cellar/gcc@11/11.3.0/lib/gcc/11/libquadmath.0.dylib) was built for newer macOS version (11.5) than being linked (11.0)
-I-TMacOSXSystem::ACLiC: creating shared library /Users/AndreasStokkkeland/FitsAt7and13TeV/outputPutTogetherData/./AddingHistoTalkerWithFit13TeV_C.so
 Pion fit #0
-I-TCanvas::MakeDefCanvas:  created default TCanvas with name c1
  FCN=13.7527 FROM MIGRAD    STATUS=CONVERGED     229 CALLS         230 TOTAL
                      EDM=4.71825e-11    STRATEGY= 1      ERROR MATRIX ACCURATE 
   EXT PARAMETER                                   STEP         FIRST   
@@ -629,37 +577,10 @@ Proton fit #9
    3  T            3.02886e-01   5.98447e-03   1.88904e-06   1.58071e-02
    4  mass         9.38272e-01     fixed    
 Hej
-I-TCanvas::Print: eps file HEPDataPionFitDiv13TeV.eps has been created
-I-TCanvas::Print: eps file HEPDataPionN113TeV.eps has been created
-I-TH1D::SaveAs: ROOT file HEPDataN11.root has been created
-W-TFile::Append: Replacing existing TH1: Div (Potential memory leak).
-I-TCanvas::Print: eps file HEPDataPionN1213TeV.eps has been created
-I-TH1D::SaveAs: ROOT file HEPDataN121.root has been created
-I-TCanvas::Print: eps file HEPDataKaonFitDiv13TeV.eps has been created
-W-TFile::Append: Replacing existing TH1: Div (Potential memory leak).
-I-TCanvas::Print: eps file HEPDataKaonN113TeV.eps has been created
-I-TH1D::SaveAs: ROOT file HEPDataN13.root has been created
-W-TFile::Append: Replacing existing TH1: Div (Potential memory leak).
-I-TCanvas::Print: eps file HEPDataKaonN1213TeV.eps has been created
-I-TH1D::SaveAs: ROOT file HEPDataN123.root has been created
-I-TCanvas::Print: eps file HEPDataProtonFitDiv13TeV.eps has been created
-W-TFile::Append: Replacing existing TH1: Div (Potential memory leak).
-I-TCanvas::Print: eps file HEPDataProtonN113TeV.eps has been created
-I-TH1D::SaveAs: ROOT file HEPDataN15.root has been created
-W-TFile::Append: Replacing existing TH1: Div (Potential memory leak).
-I-TCanvas::Print: eps file HEPDataProtonN1213TeV.eps has been created
-I-TH1D::SaveAs: ROOT file HEPDataN125.root has been created
-W-TFile::Append: Replacing existing TH1: Theconstantk (Potential memory leak).
- <message repeated 1 time>
-I-TH1D::SaveAs: ROOT file CN21.root has been created
-I-TH1D::SaveAs: ROOT file CN23.root has been created
-I-TH1D::SaveAs: ROOT file CN25.root has been created
 Hej
-Hej
-I-TCanvas::Print: eps file cN213TeV.eps has been created
-Hej
-Hej
-I-TCanvas::Print: eps file cN113TeV.eps has been created
-Hej
-I-TCanvas::Print: eps file cN1213TeV.eps has been created
-The time of the code 25 s
+Hej4
+Hej5
+Hej51
+Hej7
+I-TCanvas::Print: eps file MButanfits.eps has been created
+The time of the code 13 s

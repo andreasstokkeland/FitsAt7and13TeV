@@ -1,0 +1,230 @@
+rm: *.so: No such file or directory
+rm: *.d: No such file or directory
+rm: *.pcm: No such file or directory
+   ------------------------------------------------------------------
+  | Welcome to ROOT 6.24/06                        https://root.cern |
+  | (c) 1995-2021, The ROOT Team; conception: R. Brun, F. Rademakers |
+  | Built for macosx64 on Feb 07 2022, 18:03:00                      |
+  | From tags/v6-24-06@v6-24-06                                      |
+  | With Apple clang version 13.0.0 (clang-1300.0.29.30)             |
+  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q'       |
+   ------------------------------------------------------------------
+
+Info in <TMacOSXSystem::ACLiC>: creating shared library /Users/AndreasStokkkeland/FitsAt7and13TeV/outputPutTogetherData/outputDiv/./MultiFit2k7TeV_C.so
+
+****************************************
+         Invalid FitResult  (status = 4 )
+****************************************
+Minimizer is Minuit2 / Migrad
+Chi2                      =      65.4843
+NDf                       =          314
+Edm                       =    0.0070172
+NCalls                    =         4711
+Par_0                     =      64.0521   +/-   11.4397     
+Par_1                     =     -61.1078   +/-   11.444      
+Par_2                     =      27.7753   +/-   5.11491     
+Par_3                     =     -25.7775   +/-   5.11418     
+Par_4                     =      8.35446   +/-   0.389295    
+Par_5                     =      -6.9167   +/-   0.387302    
+Par_6                     =     -1.75353   +/-   2.01331     
+Par_7                     =      2.86702   +/-   2.00302     
+Par_8                     =     -8.24059   +/-   2.89875     
+Par_9                     =      9.13052   +/-   2.89122     
+Par_10                    =     -14.1888   +/-   3.6052      
+Par_11                    =       14.847   +/-   3.60083     
+Par_12                    =     -19.2116   +/-   3.98453     
+Par_13                    =       19.643   +/-   3.98367     
+Par_14                    =     -20.1635   +/-   3.8944      
+Par_15                    =      20.4485   +/-   3.89484     
+Par_16                    =     -20.2302   +/-   3.97861     
+Par_17                    =      20.3687   +/-   3.97859     
+Par_18                    =    0.0075811   +/-   0.00156435  
+Info in <TCanvas::Print>: eps file Comb2k17TeV.eps has been created
+Info in <TH1F::SaveAs>: ROOT file CSoft1.root has been created
+Info in <TH1F::SaveAs>: ROOT file CHard1.root has been created
+Info in <TH1D::SaveAs>: ROOT file Ck1.root has been created
+
+****************************************
+         Invalid FitResult  (status = 4 )
+****************************************
+Minimizer is Minuit2 / Migrad
+Chi2                      =      29.6777
+NDf                       =          314
+Edm                       =   0.00794603
+NCalls                    =         6141
+Par_0                     =      42.3368   +/-   12.8431     
+Par_1                     =     -39.3967   +/-   12.848      
+Par_2                     =      17.2876   +/-   7.23577     
+Par_3                     =     -15.3091   +/-   7.20483     
+Par_4                     =      5.41828   +/-   1.53374     
+Par_5                     =      -3.9859   +/-   1.52939     
+Par_6                     =     0.514493   +/-   0.199952    
+Par_7                     =     0.615179   +/-   0.191765    
+Par_8                     =     -3.86687   +/-   1.76692     
+Par_9                     =      4.77139   +/-   1.7649      
+Par_10                    =     -8.89756   +/-   3.39148     
+Par_11                    =      9.55627   +/-   3.39009     
+Par_12                    =     -12.1307   +/-   4.31365     
+Par_13                    =      12.5618   +/-   4.31275     
+Par_14                    =     -12.9896   +/-   4.81337     
+Par_15                    =      13.2727   +/-   4.80979     
+Par_16                    =     -12.6093   +/-   3.99761     
+Par_17                    =      12.7479   +/-   3.99937     
+Par_18                    =    0.0119435   +/-   0.00421226  
+Warning in <TCanvas::Constructor>: Deleting canvas with same name: Simfit
+Info in <TCanvas::Print>: eps file Comb2k27TeV.eps has been created
+Info in <TH1F::SaveAs>: ROOT file CSoft2.root has been created
+Info in <TH1F::SaveAs>: ROOT file CHard2.root has been created
+Info in <TH1D::SaveAs>: ROOT file Ck2.root has been created
+
+****************************************
+         Invalid FitResult  (status = 4 )
+****************************************
+Minimizer is Minuit2 / Migrad
+Chi2                      =      130.699
+NDf                       =          314
+Edm                       =    0.0107805
+NCalls                    =         4736
+Par_0                     =       82.511   +/-   17.0635     
+Par_1                     =     -79.5368   +/-   17.0618     
+Par_2                     =      38.2544   +/-   7.36397     
+Par_3                     =     -36.1975   +/-   7.36786     
+Par_4                     =      9.93654   +/-   1.41465     
+Par_5                     =     -8.48472   +/-   1.41769     
+Par_6                     =     -6.66953   +/-   2.01503     
+Par_7                     =      7.75195   +/-   2.01189     
+Par_8                     =     -14.1502   +/-   3.2158      
+Par_9                     =      15.0077   +/-   3.21531     
+Par_10                    =     -21.7181   +/-   4.58161     
+Par_11                    =      22.3314   +/-   4.58259     
+Par_12                    =     -29.5085   +/-   6.2189      
+Par_13                    =      29.8687   +/-   6.21944     
+Par_14                    =     -32.2818   +/-   7.0163      
+Par_15                    =      32.4769   +/-   7.01538     
+Par_16                    =     -28.9835   +/-   6.31603     
+Par_17                    =      29.0548   +/-   6.31535     
+Par_18                    =   0.00879659   +/-   0.00195948  
+Warning in <TCanvas::Constructor>: Deleting canvas with same name: Simfit
+Info in <TCanvas::Print>: eps file Comb2k37TeV.eps has been created
+Info in <TH1F::SaveAs>: ROOT file CSoft3.root has been created
+Info in <TH1F::SaveAs>: ROOT file CHard3.root has been created
+Info in <TH1D::SaveAs>: ROOT file Ck3.root has been created
+Hej
+Info in <TCanvas::Print>: eps file cCk7TeV.eps has been created
+Info in <TCanvas::Print>: eps file cCH7TeV.eps has been created
+Hej
+Info in <TCanvas::Print>: eps file cCS7TeV.eps has been created
+   ------------------------------------------------------------------
+  | Welcome to ROOT 6.24/06                        https://root.cern |
+  | (c) 1995-2021, The ROOT Team; conception: R. Brun, F. Rademakers |
+  | Built for macosx64 on Feb 07 2022, 18:03:00                      |
+  | From tags/v6-24-06@v6-24-06                                      |
+  | With Apple clang version 13.0.0 (clang-1300.0.29.30)             |
+  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q'       |
+   ------------------------------------------------------------------
+
+Info in <TMacOSXSystem::ACLiC>: creating shared library /Users/AndreasStokkkeland/FitsAt7and13TeV/outputPutTogetherData/outputDiv/./MultiFit2k13TeV_C.so
+
+****************************************
+         Invalid FitResult  (status = 4 )
+****************************************
+Minimizer is Minuit2 / Migrad
+Chi2                      =      86.4903
+NDf                       =          341
+Edm                       =    0.0173172
+NCalls                    =         4730
+Par_0                     =       56.319   +/-   10.5076     
+Par_1                     =     -53.2219   +/-   10.5078     
+Par_2                     =      20.4023   +/-   3.027       
+Par_3                     =     -18.3961   +/-   3.03392     
+Par_4                     =      4.46521   +/-   0.0867596   
+Par_5                     =     -3.04769   +/-   0.0837138   
+Par_6                     =     -2.67663   +/-   1.16159     
+Par_7                     =      3.76774   +/-   1.15698     
+Par_8                     =     -7.20621   +/-   1.83344     
+Par_9                     =      8.07432   +/-   1.83126     
+Par_10                    =     -11.7892   +/-   2.50833     
+Par_11                    =      12.4182   +/-   2.5085      
+Par_12                    =     -15.1535   +/-   3.1361      
+Par_13                    =      15.5621   +/-   3.13698     
+Par_14                    =     -15.9147   +/-   3.40087     
+Par_15                    =       16.175   +/-   3.40078     
+Par_16                    =     -15.2826   +/-   3.35768     
+Par_17                    =      15.4034   +/-   3.35715     
+Par_18                    =   0.00999979   +/-   0.00220777  
+Info in <TCanvas::Print>: eps file Comb2k113TeV.eps has been created
+Info in <TH1F::SaveAs>: ROOT file CSoft1.root has been created
+Info in <TH1F::SaveAs>: ROOT file CHard1.root has been created
+Info in <TH1D::SaveAs>: ROOT file Ck1.root has been created
+
+****************************************
+         Invalid FitResult  (status = 4 )
+****************************************
+Minimizer is Minuit2 / Migrad
+Chi2                      =      138.681
+NDf                       =          341
+Edm                       =    0.0602734
+NCalls                    =         4739
+Par_0                     =      398.957   +/-   72.3275     
+Par_1                     =     -396.207   +/-   72.3254     
+Par_2                     =      294.091   +/-   53.0805     
+Par_3                     =     -291.962   +/-   53.0795     
+Par_4                     =       159.08   +/-   28.3647     
+Par_5                     =     -157.517   +/-   28.3646     
+Par_6                     =      41.3812   +/-   6.9482      
+Par_7                     =     -40.1948   +/-   6.94824     
+Par_8                     =     -35.9036   +/-   7.12339     
+Par_9                     =      36.8354   +/-   7.12282     
+Par_10                    =     -95.2731   +/-   17.4986     
+Par_11                    =      95.9527   +/-   17.4985     
+Par_12                    =     -146.071   +/-   26.4972     
+Par_13                    =      146.506   +/-   26.4971     
+Par_14                    =     -168.088   +/-   30.3453     
+Par_15                    =      168.359   +/-   30.3452     
+Par_16                    =     -168.267   +/-   30.4662     
+Par_17                    =      168.391   +/-   30.4662     
+Par_18                    =   0.00100852   +/-   0.000195161 
+Warning in <TCanvas::Constructor>: Deleting canvas with same name: Simfit
+Info in <TCanvas::Print>: eps file Comb2k313TeV.eps has been created
+Info in <TH1F::SaveAs>: ROOT file CSoft3.root has been created
+Info in <TH1F::SaveAs>: ROOT file CHard3.root has been created
+Info in <TH1D::SaveAs>: ROOT file Ck3.root has been created
+
+****************************************
+         Invalid FitResult  (status = 4 )
+****************************************
+Minimizer is Minuit2 / Migrad
+Chi2                      =       137.24
+NDf                       =          341
+Edm                       =     0.138924
+NCalls                    =         4714
+Par_0                     =      46.2987   +/-   5.64934     
+Par_1                     =     -43.1701   +/-   5.63614     
+Par_2                     =       20.761   +/-   2.51872     
+Par_3                     =     -18.6791   +/-   2.50827     
+Par_4                     =      6.79071   +/-   1.01595     
+Par_5                     =     -5.32449   +/-   1.00036     
+Par_6                     =     -3.78891   +/-   0.655303    
+Par_7                     =      4.84515   +/-   0.652956    
+Par_8                     =      -9.3059   +/-   1.38724     
+Par_9                     =      10.1048   +/-   1.38225     
+Par_10                    =     -11.9981   +/-   1.61449     
+Par_11                    =      12.5619   +/-   1.61362     
+Par_12                    =     -15.8056   +/-   2.04472     
+Par_13                    =      16.1244   +/-   2.04307     
+Par_14                    =     -18.1638   +/-   2.29453     
+Par_15                    =      18.3225   +/-   2.29402     
+Par_16                    =     -14.2447   +/-   1.82776     
+Par_17                    =      14.3032   +/-   1.82679     
+Par_18                    =    0.0170296   +/-   0.00232441  
+Warning in <TCanvas::Constructor>: Deleting canvas with same name: Simfit
+Info in <TCanvas::Print>: eps file Comb2k513TeV.eps has been created
+Info in <TH1F::SaveAs>: ROOT file CSoft5.root has been created
+Info in <TH1F::SaveAs>: ROOT file CHard5.root has been created
+Info in <TH1D::SaveAs>: ROOT file Ck5.root has been created
+Hej
+Info in <TCanvas::Print>: eps file cCk13TeV.eps has been created
+Hej
+Info in <TCanvas::Print>: eps file cCH13TeV.eps has been created
+Info in <TCanvas::Print>: eps file cCS13TeV.eps has been created
+The time of the code 17 s

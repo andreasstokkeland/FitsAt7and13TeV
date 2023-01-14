@@ -32,7 +32,7 @@ const int NMax = 9;
 //NMin = 0; starts at the first histogram
 const int NMin = 0;
 
-const int Npar = 2 + 2*(NMax-NMin);
+const int Npar = 1 + 2*(NMax-NMin);
 
 
 
@@ -43,31 +43,29 @@ struct GlobalChi2 {GlobalChi2(
 
     double operator()(const double *par) const
     {
-        int ipar[NMax-NMin][4] = {{0,1,20, 21},{2,3,20, 21}, {4,5,20, 21},{6,7,20, 21},{8,9,20, 21},   {10,11,20, 21},{12,13,20, 21},{14,15,20, 21} } ;
+        int ipar[NMax-NMin][3] = {{0,1,20},{2,3,20}, {4,5,20},{6,7,20},{8,9,20},   {10,11,20},{12,13,20},{14,15,20} } ;
 
-        for (int i = 0; i < Npar-3; i = i + 2){
+        for (int i = 0; i < Npar-2; i = i + 2){
             
             ipar[i/2][0] = i;
             ipar[i/2][1] = i +1;
-            ipar[i/2][2] = Npar-2;
-            ipar[i/2][3] = Npar-1;
+            ipar[i/2][2] = Npar-1;
           
         };
         
-        double p[NMax-NMin][4] = {{0,0,0,0},{0,0,0,0}, {0,0,0,0},{0,0,0,0},{0,0,0,0},   {0,0,0,0},{0,0,0,0},{0,0,0,0} } ;
+        double p[NMax-NMin][3] = {{0,0,0},{0,0,0}, {0,0,0},{0,0,0},{0,0,0},   {0,0,0},{0,0,0},{0,0,0} } ;
         
         for (int i = 0; i < (NMax - NMin); i++){
             
             p[i][0] = par[ipar[i][0]] ;
             p[i][1] = par[ipar[i][1]] ;
             p[i][2] = par[ipar[i][2]] ;
-            p[i][3] = par[ipar[i][3]] ;
-            
+
         };
         
         
         return  (*fChi2_1)( p[0] ) + (*fChi2_2)(p[1]) + (*fChi2_3)(p[2]) + (*fChi2_4)(p[3]) + (*fChi2_5)(p[4]) + (*fChi2_6)(p[5]) +(*fChi2_7)(p[6]) + (*fChi2_8)(p[7]) + (*fChi2_9)(p[8]);
-
+        
         
     };
  
@@ -80,9 +78,10 @@ struct GlobalChi2 {GlobalChi2(
     const ROOT::Math::IMultiGenFunction *fChi2_7;
     const ROOT::Math::IMultiGenFunction *fChi2_8;
     const ROOT::Math::IMultiGenFunction *fChi2_9;
-
-        
+   
 };
+
+
 
 
 Double_t Funcer(Double_t *x, Double_t *p)
@@ -91,7 +90,7 @@ Double_t Funcer(Double_t *x, Double_t *p)
     Double_t ConstHard = p[0];
     Double_t ConstSoft = p[1];
     Double_t k1 = p[2];
-    Double_t k2 = p[3];
+    //Double_t k2 = p[3];
     
     //Max limits
     if(pt>10.) ConstSoft = 0;
@@ -102,8 +101,8 @@ Double_t Funcer(Double_t *x, Double_t *p)
     if(pt<0.4) ConstHard = 0;
     
 
-    //Double_t ftot = ConstHard + ConstSoft* TMath::Exp(k/pt); //First try
-    Double_t ftot = ConstHard + ConstSoft* TMath::Power(pt, -k1); //Second try
+    Double_t ftot = ConstHard + ConstSoft* TMath::Exp(k1/pt); //First try
+    //Double_t ftot = ConstHard + ConstSoft* TMath::Power(pt, -k1); //Best
    // Double_t ftot = ConstHard + ConstSoft* TMath::Power(pt, TMath::Power(k1,k2));
     
     //Double_t ftot = ConstHard + ConstSoft* TMath::Exp( - TMath::Power(pt,k)  ); Third try
@@ -121,8 +120,8 @@ void combinedFit(Int_t Table = 1 )
 {
     
 
-    //gStyle->SetPadGridX("False");
-    //gStyle->SetPadGridY("False");
+    gStyle->SetPadGridX("False");
+    gStyle->SetPadGridY("False");
 
 
     int Y[9] = {1,2,3,4,5,6,7,8,9};
@@ -150,8 +149,8 @@ void combinedFit(Int_t Table = 1 )
     
     for (int i = 0; i < (NMax - NMin) ; i++){
         
-        funcs[i] = new TF1("f",Funcer,0.4,10,4);
-        funcs[i] ->SetParNames(Form("Hard%d", i), Form("Soft%d", i), "k1", "k2");
+        funcs[i] = new TF1("f",Funcer,0.4,10,3);
+        funcs[i] ->SetParNames(Form("Hard%d", i), Form("Soft%d", i), "k1");
         
     }
 
@@ -187,9 +186,74 @@ void combinedFit(Int_t Table = 1 )
 
     fitter.Config().SetParamsSettings(Npar, par0);
     
-    fitter.Config().ParSettings(Npar-1).SetValue(1);
-    fitter.Config().ParSettings(Npar-1).Fix();
-    fitter.Config().ParSettings(Npar-2).SetLimits(0.5, 1);
+//    fitter.Config().ParSettings(Npar-1).SetValue(1);
+//    fitter.Config().ParSettings(Npar-1).Fix();
+    //fitter.Config().ParSettings(Npar-2).SetLimits(0.5, 1);
+    
+    
+    //fitter.Config().ParSettings(Npar-1).SetLimits(0.005, 0.1);
+
+    
+//    if(Table == 1){
+//        //fitter.Config().ParSettings(Npar-1).SetLimits(0.0176, 0.0177 );
+//        fitter.Config().ParSettings(Npar-1).SetLimits(0.01, 0.02 );
+//
+//    }
+//
+//    if(Table == 2){
+//        //fitter.Config().ParSettings(Npar-1).SetLimits(0.0095, 0.0096);
+//        fitter.Config().ParSettings(Npar-1).SetLimits(0.005, 0.01);
+//
+//    }
+//
+//    if(Table == 3){
+//        //fitter.Config().ParSettings(Npar-1).SetLimits(0.0051, 0.0052);
+//        fitter.Config().ParSettings(Npar-1).SetLimits(0.005, 0.01);
+//
+//    }
+//
+    
+    
+    if(Table == 1){
+        fitter.Config().ParSettings(Npar-1).SetLimits(0.0177246 - 0.00206307, 0.0177246 + 0.00206307);
+
+    }
+
+    if(Table == 2){
+        fitter.Config().ParSettings(Npar-1).SetLimits(0.00966613 - 0.00208306, 0.00966613 + 0.00208306);
+
+
+    }
+
+    if(Table == 3){
+        fitter.Config().ParSettings(Npar-1).SetLimits(0.00516139 - 0.000677114, 0.00516139 + 0.000677114);
+
+    }
+    
+    
+    
+    
+//    if(Table == 1){
+//        fitter.Config().ParSettings(Npar-1).SetValue(0.0177246);
+//        fitter.Config().ParSettings(Npar-1).Fix();
+//
+//    }
+//
+//    if(Table == 2){
+//        fitter.Config().ParSettings(Npar-1).SetValue(0.00966613);
+//        fitter.Config().ParSettings(Npar-1).Fix();
+//
+//    }
+//
+//    if(Table == 3){
+//        fitter.Config().ParSettings(Npar-1).SetValue(0.00516139);
+//        fitter.Config().ParSettings(Npar-1).Fix();
+//
+//    }
+//
+    
+    
+    
     
     fitter.Config().MinimizerOptions().SetPrintLevel(0);
     fitter.Config().SetMinimizer("Minuit2", "Migrad");
@@ -216,7 +280,9 @@ void combinedFit(Int_t Table = 1 )
     for (int i = 0; i < (NMax - NMin) ; i++){
         
 
-        funcerTot[i] = new TF1("funcerTot", "[ConstHard] + [ConstSoft]* ( x**( -[k1]) )", 0.4, 10.);
+        funcerTot[i] = new TF1("funcerTot", "[ConstHard] + [ConstSoft]* ( [k1]/x )", 0.4, 10.); //First try
+
+        //funcerTot[i] = new TF1("funcerTot", "[ConstHard] + [ConstSoft]* ( x**( -[k1]) )", 0.4, 10.);
         funcerTot[i] ->SetParNames(Form("Hard%d", i), Form("Soft%d", i), "k1");
         
     }
@@ -235,15 +301,15 @@ void combinedFit(Int_t Table = 1 )
 
     for (int i = 0 ; i < (NMax - NMin); i++){
         
-        funcerTot[i]->FixParameter(0, funcs[i]->GetParameter(0) );
-        funcerTot[i]->FixParameter(1, funcs[i]->GetParameter(1) );
-        funcerTot[i]->FixParameter(2, funcs[i]->GetParameter(2) );
-        funcerTot[i]->FixParameter(3, funcs[i]->GetParameter(3) );
+//        funcerTot[i]->FixParameter(0, funcs[i]->GetParameter(0) );
+//        funcerTot[i]->FixParameter(1, funcs[i]->GetParameter(1) );
+//        funcerTot[i]->FixParameter(2, funcs[i]->GetParameter(2) );
+        //funcerTot[i]->FixParameter(3, funcs[i]->GetParameter(3) );
 
         
         funcerTot[i]->SetRange(range[i]().first, range[i]().second);
-        funcerTot[i]->SetLineColor(ColorCountDirection*i + ColorStart);
-        Histos[i]->GetListOfFunctions()->Add(funcerTot[i]);
+        funcs[i]->SetLineColor(ColorCountDirection*i + ColorStart);
+        Histos[i]->GetListOfFunctions()->Add(funcs[i]);
         
         
         Histos[i]->SetMaximum(5.1);
@@ -258,7 +324,7 @@ void combinedFit(Int_t Table = 1 )
         lSoftName->SetTextSize(0.03);
         lSoftName->Draw();
         
-        TLatex *lSoftValue = new TLatex(TextXStart + ValueShiftX, LineShiftYMult*i +0.06 + TextYStart +LineShiftY, Form("#color[%d]{%0.3f #pm %0.3f}", ColorCountDirection*i + ColorStart,  funcs[i]->GetParameter(1), result.ParError(2*i+1) ) );
+        TLatex *lSoftValue = new TLatex(TextXStart + ValueShiftX, LineShiftYMult*i +0.06 + TextYStart +LineShiftY, Form("#color[%d]{%0.2f #pm %0.2f}", ColorCountDirection*i + ColorStart,  funcs[i]->GetParameter(1), result.ParError(2*i+1) ) );
         lSoftValue->SetNDC();
         lSoftValue->SetTextSize(0.03);
         lSoftValue->Draw();
@@ -269,7 +335,7 @@ void combinedFit(Int_t Table = 1 )
         lHardName->SetTextSize(0.03);
         lHardName->Draw();
 
-        TLatex *lHardValue = new TLatex(TextXStart + ValueShiftX, LineShiftYMult*i +0.03 + TextYStart +LineShiftY, Form("#color[%d]{%0.3f #pm %0.3f}", ColorCountDirection*i + ColorStart, funcs[i]->GetParameter(0), result.ParError(2*i) ) );
+        TLatex *lHardValue = new TLatex(TextXStart + ValueShiftX, LineShiftYMult*i +0.03 + TextYStart +LineShiftY, Form("#color[%d]{%0.2f #pm %0.2f}", ColorCountDirection*i + ColorStart, funcs[i]->GetParameter(0), result.ParError(2*i) ) );
         lHardValue->SetNDC();
         lHardValue->SetTextSize(0.03);
         lHardValue->Draw();
@@ -278,7 +344,9 @@ void combinedFit(Int_t Table = 1 )
     }
     
     
-    TLatex *lFunc = new TLatex(0.2, 0.83,Form("#color[1]{ f(p_{T}) = C_{Hard} + C_{Soft} p_{T}^{-k} }") );
+    TLatex *lFunc = new TLatex(0.2, 0.83,Form("#color[1]{ #it{f}(#it{p}_{T}) = #it{C}_{Hard} + #it{C}_{Soft} e^{ #it{k}/#it{p}_{T}} }") ); //first try
+
+    //TLatex *lFunc = new TLatex(0.2, 0.83,Form("#color[1]{ f(p_{T}) = C_{Hard} + C_{Soft} p_{T}^{-k} }") ); //best
 
     lFunc->SetNDC();
     lFunc->SetTextSize(0.03);
@@ -292,7 +360,7 @@ void combinedFit(Int_t Table = 1 )
     lkName->SetTextSize(0.03);
     lkName->Draw();
     
-    TLatex *lkValue = new TLatex(TextXStart + ValueShiftX, TextYStart,Form("#color[2]{%0.3f #pm %0.3f}", funcs[NMin]->GetParameter(2), result.ParError(2*(NMax - NMin)) ) );
+    TLatex *lkValue = new TLatex(TextXStart + ValueShiftX, TextYStart,Form("#color[2]{%0.4f #pm %0.4f}", funcs[NMin]->GetParameter(2), result.ParError(2*(NMax - NMin)) ) );
     lkValue->SetNDC();
     lkValue->SetTextSize(0.03);
     lkValue->Draw();
@@ -323,24 +391,24 @@ void combinedFit(Int_t Table = 1 )
     
     
     if(Table == 1){
-        Histos[0]->SetTitle( "Different multiplicity classes over their min bias and fits for #pi#pm at #sqrt{s} = 7 TeV" );
+        Histos[0]->SetTitle( "Multiplicity classes over their MB and fits for #pi^{#pm} at #sqrt{s} = 7 TeV" );
 
     }
 
     if(Table == 2){
-        Histos[0]->SetTitle( "Different multiplicity classes over their min bias and fits for K#pm at #sqrt{s} = 7 TeV" );
+        Histos[0]->SetTitle( "Multiplicity classes over their MB and fits for K^{#pm} at #sqrt{s} = 7 TeV" );
 
     }
     
     if(Table == 3){
-        Histos[0]->SetTitle( "Different multiplicity classes over their min bias and fits for protons at #sqrt{s} = 7 TeV" );
+        Histos[0]->SetTitle( "Multiplicity classes over their MB and fits for p(#bar{p}) at #sqrt{s} = 7 TeV" );
 
     }
 
     
     
-    Histos[0] -> GetYaxis()->SetTitle("(dN/dp_{T}) /(dN_{MB}/dp_{T})");
-    Histos[0] -> GetXaxis()->SetTitle("p_{T} (GeV/c)");
+    Histos[0] -> GetYaxis()->SetTitle("#frac{#it{dN}}{#it{dp}_{T}} #[]{#frac{#it{dN}_{MB}}{#it{dp}_{T}}}^{-1}");
+    Histos[0] -> GetXaxis()->SetTitle("#it{p}_{T} (GeV/c)");
     
     
     c1->SaveAs(Form("Comb2k%d7TeV.eps", Table ));
@@ -365,13 +433,59 @@ void combinedFit(Int_t Table = 1 )
     CHard -> SaveAs(Form( "CHard%d.root", Table));
 
     
-    TH1F* Ck = new TH1F( "The_constant_k" , "The constant k-value over mass", 2, 0, 1)    ;
-
-    Ck ->SetBinContent(1, funcs[NMin]->GetParameter(2));
-    Ck ->SetBinError(1, result.ParError(2*(NMax - NMin)) );
     
-    Ck -> SaveAs(Form( "Ck%d.root", Table));
+    
+    double MassesGeV[3] = {0.1396, 0.4937, 0.9383}; //{pion#pm, kaon#pm, proton} // in GeV
 
+    
+    
+    if(Table==1){
+        TH1D* hCk1 = new TH1D( "Theconstantk" , "#it{k} over each particles' mass at #sqrt{s} = 7 TeV", 3, 0, 3)    ;
+        
+        hCk1 ->SetBinContent(1, funcs[NMin]->GetParameter(2)/MassesGeV[0] );
+        hCk1 ->SetBinError(1, result.ParError(2*(NMax - NMin))/MassesGeV[0] );
+
+        hCk1 -> SaveAs(Form( "Ck%d.root", 1));
+    }
+    
+    
+    
+    if(Table == 2){
+        TH1D* hCk2 = new TH1D( "Theconstantk" , "#it{k} over each particles' mass at #sqrt{s} = 7 TeV", 3, 0, 3)    ;
+        
+        hCk2 ->SetBinContent(2, funcs[NMin]->GetParameter(2)/MassesGeV[1] );
+        hCk2 ->SetBinError(2, result.ParError(2*(NMax - NMin))/MassesGeV[1] );
+
+        hCk2 -> SaveAs(Form( "Ck%d.root", 2));
+    }
+
+    
+    
+    
+    if(Table==3){
+        TH1D* hCk3 = new TH1D( "Theconstantk" , "#it{k} over each particles' mass at #sqrt{s} = 7 TeV", 3, 0, 3)    ;
+        
+        hCk3 ->SetBinContent(3, funcs[NMin]->GetParameter(2)/MassesGeV[2] );
+        hCk3 ->SetBinError(3, result.ParError(2*(NMax - NMin))/MassesGeV[2] );
+        
+        hCk3 -> SaveAs(Form( "Ck%d.root", 3));
+    }
+    
+
+
+    
+    
+    
+    
+    
+    
+//    TH1F* Ck = new TH1F( "The_constant_k" , "The constant k-value over mass", 2, 0, 1)    ;
+//
+//    Ck ->SetBinContent(1, funcs[NMin]->GetParameter(2));
+//    Ck ->SetBinError(1, result.ParError(2*(NMax - NMin)) );
+//
+//    Ck -> SaveAs(Form( "Ck%d.root", Table));
+//
     
 }
 
@@ -404,7 +518,7 @@ void AddingHistos(){
         
         
         TFile* fileCk = TFile::Open(Form("Ck%d.root", Table[i]  ));
-        HistosCk[i] = (TH1D*)fileCk->Get("The_constant_k");
+        HistosCk[i] = (TH1D*)fileCk->Get("Theconstantk");
         
         
         if(!fileCH)
@@ -418,47 +532,47 @@ void AddingHistos(){
     }
     
     
-    float MassesGeV[3] = {0.1396, 0.4937, 0.9383}; //{pion#pm, kaon#pm, proton} // in GeV
     
-    int Color[3] = {4,632-2,2};
-
     
-    TH1D* hCk = new TH1D( "Theconstantk" , "The constant k-value over mass", 3, 0.5, 2.5)    ;
-
+    
     cout << "Hej" << endl;
 
+    float SIZE = 0.06;
+
+    float SIZEOffset = 0.82;
+
+    
+    TCanvas *cCk = new TCanvas("cCk", "The constant k-value over each particles mass");
+
+    int Color[3] = {4,632-2,2};
     
     for (int i = 0 ; i < 3; i++){
-        hCk ->SetBinContent(i+1, HistosCk[i]->GetBinContent(1)/MassesGeV[i] );
-        hCk ->SetBinError(i+1, HistosCk[i]->GetBinError(1)/MassesGeV[i] );
-        
-        hCk ->SetLineWidth(2);
 
+        HistosCk[i] ->GetXaxis() ->SetBinLabel(1, "#pi#pm");
+        HistosCk[i] ->GetXaxis() ->SetBinLabel(2, "K#pm");
+        HistosCk[i] ->GetXaxis() ->SetBinLabel(3, "p(#bar{p})");
+        HistosCk[i] ->GetXaxis() ->SetLabelSize(0.1);
+        //HistosCk[i] ->SetMaximum( 51 );
+        //HistosCk[i] ->SetMinimum( 7);
+        HistosCk[i] ->SetLineWidth(2);
+        HistosCk[i] ->SetStats(0);
+        //HistosCk[i] ->GetYaxis()->SetTitle("(The unit of #it{k})/GeV");
+
+        HistosCk[i] ->GetYaxis()->SetTitle("#it{k}[GeV/c] over mass[GeV/c^{2}] (c)"); //First fit
+        
+        
+        HistosCk[i]->SetLineColor( Color[i] );
+        HistosCk[i]->Draw("sames");
+        
+        HistosCk[i] ->GetYaxis()->SetTitleSize(SIZE);
+        HistosCk[i] ->GetYaxis()->SetTitleOffset(SIZEOffset-0.05);
+        
     }
     
-    
-    hCk ->GetXaxis() ->SetBinLabel(1, "#pi#pm");
-    hCk ->GetXaxis() ->SetBinLabel(2, "K#pm");
-    hCk ->GetXaxis() ->SetBinLabel(3, "p(#bar{p})");
-
-    hCk ->GetXaxis() ->SetLabelSize(0.1);
-    
-    
-
-    TCanvas *cCk = new TCanvas("cCk", "The constant k-value over each particles mass");
-    
-    
-    hCk->Draw("same");
-    hCk->SetStats(0);
-    
-
-    hCk->SetTitle( "The constant k-values over each particles mass at #sqrt{s} = 7 TeV" );
-    
-    hCk-> GetYaxis()->SetTitle("The unit of the k-value/GeV");
-
     
     cCk -> SaveAs("cCk7TeV.eps");
 
+ 
     
     
     
@@ -466,73 +580,144 @@ void AddingHistos(){
     
     
     
-    TH1D* hCk1 = new TH1D( "Theconstantk" , "The constant k-value over mass", 3, 0.5, 2.5)    ;
-    
-    for (int i = 0 ; i < 3; i++){
-        hCk1 ->SetBinContent(i+1, HistosCk[i]->GetBinContent(1)/0.5 );
-        hCk1 ->SetBinError(i+1, HistosCk[i]->GetBinError(1)/0.5 );
-        
-    }
     
     
-    int DIV = 100;
+//    float MassesGeV[3] = {0.1396, 0.4937, 0.9383}; //{pion#pm, kaon#pm, proton} // in GeV
+//
+//    int Color[3] = {4,632-2,2};
+//
+//
+//    TH1D* hCk = new TH1D( "Theconstantk" , "The constant k-value over mass", 3, 0.5, 2.5)    ;
+//
+//    cout << "Hej" << endl;
+//
+//
+//    for (int i = 0 ; i < 3; i++){
+//        hCk ->SetBinContent(i+1, HistosCk[i]->GetBinContent(1)/MassesGeV[i] );
+//        hCk ->SetBinError(i+1, HistosCk[i]->GetBinError(1)/MassesGeV[i] );
+//
+//        hCk ->SetLineWidth(2);
+//
+//    }
+//
+//
+//    hCk ->GetXaxis() ->SetBinLabel(1, "#pi#pm");
+//    hCk ->GetXaxis() ->SetBinLabel(2, "K#pm");
+//    hCk ->GetXaxis() ->SetBinLabel(3, "p(#bar{p})");
+//
+//    hCk ->GetXaxis() ->SetLabelSize(0.1);
+//
+//
+//
+//    TCanvas *cCk = new TCanvas("cCk", "The constant k-value over each particles mass");
+//
+//
+//    hCk->Draw("same");
+//    hCk->SetStats(0);
+//
+//
+//    hCk->SetTitle( "The constant k-values over each particles mass at #sqrt{s} = 7 TeV" );
+//
+//    hCk-> GetYaxis()->SetTitle("The unit of the k-value/GeV");
+//
+//
+//    cCk -> SaveAs("cCk7TeV.eps");
+//
+//
+//
+//
+//
+//
+//
+//
+//    TH1D* hCk1 = new TH1D( "Theconstantk" , "The constant k-value over mass", 3, 0.5, 2.5)    ;
+//
+//    for (int i = 0 ; i < 3; i++){
+//        hCk1 ->SetBinContent(i+1, HistosCk[i]->GetBinContent(1)/0.5 );
+//        hCk1 ->SetBinError(i+1, HistosCk[i]->GetBinError(1)/0.5 );
+//
+//    }
+//
+    
+    int DIV = 1;
     int MAXMIN = 5;
     
     
     for (int ibin=1; ibin <= (HistosCS[1] -> GetNbinsX()) ; ibin++) {
-            
-        HistosCS[1] -> SetBinContent(ibin, (HistosCS[1] ->GetBinContent(ibin)) );
-        HistosCS[1] -> SetBinError(ibin, (HistosCS[1] ->GetBinError(ibin))  );
+           
+        //kaon
+        HistosCS[1] -> SetBinContent(ibin, (HistosCS[1] ->GetBinContent(ibin))/DIV );
+        HistosCS[1] -> SetBinError(ibin, (HistosCS[1] ->GetBinError(ibin))/DIV  );
                     
-        HistosCH[1] -> SetBinContent(ibin, (HistosCH[1] ->GetBinContent(ibin)) );
-        HistosCH[1] -> SetBinError(ibin, (HistosCH[1] ->GetBinError(ibin)) );
+        HistosCH[1] -> SetBinContent(ibin, (HistosCH[1] ->GetBinContent(ibin))/DIV );
+        HistosCH[1] -> SetBinError(ibin, (HistosCH[1] ->GetBinError(ibin))/DIV );
+
         
+        //proton //first fit
+        
+        HistosCS[2] -> SetBinContent(ibin, (HistosCS[2] ->GetBinContent(ibin))/3 );
+        HistosCS[2] -> SetBinError(ibin, (HistosCS[2] ->GetBinError(ibin))/3  );
+                 
+        HistosCH[2] -> SetBinContent(ibin, (HistosCH[2] ->GetBinContent(ibin))/3 );
+        HistosCH[2] -> SetBinError(ibin, (HistosCH[2] ->GetBinError(ibin))/3 );
+
     }
     
 
         
-    TCanvas *cCH = new TCanvas("cCH", "Hard parameters for different multiplicities at #sqrt{s} = 7 TeV");
+    TCanvas *cCH = new TCanvas("cCH", "Hard parameters for multiplicity classes at #sqrt{s} = 7 TeV");
     
     
     
     for (int i = 0 ; i < 3; i++){
         
 
-        HistosCH[i]->SetMaximum(4);
-        HistosCH[i]->SetMinimum( -0.5 );
-        
+        //Best fit:
+//        HistosCH[i]->SetMaximum(4);
+//        HistosCH[i]->SetMinimum( -0.5 );
+//
   
+        //First fit:
+        HistosCH[i]->SetMaximum(60);
+        HistosCH[i]->SetMinimum( -30 );
+
+        
         HistosCH[i] ->SetLineWidth(2);
         HistosCH[i]->SetLineColor( Color[i] );
         HistosCH[i]->Draw("sames");
         HistosCH[i]->SetStats(0);
         
         
-        HistosCH[i]->SetTitle( "Hard parameters for different multiplicities at #sqrt{s} = 7 TeV" );
+        HistosCH[i]->SetTitle( "Hard parameters for multiplicity classes at #sqrt{s} = 7 TeV" );
+        HistosCH[i] -> GetYaxis()->SetTitle("Hard parameter");
+        
+        HistosCH[i] ->GetYaxis()->SetTitleSize(SIZE);
+        HistosCH[i] ->GetYaxis()->SetTitleOffset(SIZEOffset);
+
         
     }
     
-    auto legendH = new TLegend(0.75, 0.65, 0.9, 0.9); //(start from left, start from bottom ) //x1,y1,x2,y2
+    auto legendH = new TLegend(0.45, 0.65, 0.9, 0.9); //(start from left, start from bottom ) //x1,y1,x2,y2
     legendH->SetHeader("Particles","C"); // option "C" allows to center the header
-    legendH->AddEntry(HistosCH[0], "#pi#pm","l");
-    legendH->AddEntry(HistosCH[1], "K#pm","l");
-    legendH->AddEntry(HistosCH[2], "p(#bar{p})","l");
+    legendH->AddEntry(HistosCH[0], "#pi^{#pm}","l");
+    legendH->AddEntry(HistosCH[1], "K^{#pm}","l");
+    legendH->AddEntry(HistosCH[2], "p(#bar{p}), all divided by 3","l");
 
     legendH->Draw();
 
     
-    TLatex *lkNameleft = new TLatex(0.1, 0.025, Form("#color[1]{%s}", "High multiplicity" ) );
+    TLatex *lkNameleft = new TLatex(0.1, 0.02, Form("#color[1]{%s}", "High multiplicity" ) );
 
 
     lkNameleft->SetNDC();
-    lkNameleft->SetTextSize(0.03);
+    lkNameleft->SetTextSize(0.05);
     lkNameleft->Draw();
     
-    TLatex *lkNameright = new TLatex(0.75, 0.025, Form("#color[1]{%s}", "Low multiplicity" ) );
+    TLatex *lkNameright = new TLatex(0.65, 0.02, Form("#color[1]{%s}", "Low multiplicity" ) );
 
 
     lkNameright->SetNDC();
-    lkNameright->SetTextSize(0.03);
+    lkNameright->SetTextSize(0.05);
     lkNameright->Draw();
     
     
@@ -544,50 +729,61 @@ void AddingHistos(){
     
     
     
-    TCanvas *cCS = new TCanvas("cCS", "Soft parameters for different multiplicities at #sqrt{s} = 7 TeV");
+    TCanvas *cCS = new TCanvas("cCS", "Soft parameters for multiplicity classes at #sqrt{s} = 7 TeV");
     cout << "Hej" << endl;
 
     
     for (int i = 0 ; i < 3; i++){
         
-
-        HistosCS[i]->SetMaximum(0.5);
-        HistosCS[i]->SetMinimum( -1.6 );
-
-                
+        //Best fit:
+//        HistosCS[i]->SetMaximum(0.5);
+//        HistosCS[i]->SetMinimum( -1.6 );
+//
+//
+        //First fit:
+        HistosCS[i]->SetMaximum(30);
+        HistosCS[i]->SetMinimum( -60 );
+        
         HistosCS[i] ->SetLineWidth(2);
         HistosCS[i]->SetLineColor( Color[i] );
         HistosCS[i]->Draw("sames");
         HistosCS[i]->SetStats(0);
         
         
-        HistosCS[i]->SetTitle("Soft parameters for different multiplicities at #sqrt{s} = 7 TeV");
+        HistosCS[i]->SetTitle("Soft parameters for multiplicity classes at #sqrt{s} = 7 TeV");
+        HistosCS[i] -> GetYaxis()->SetTitle("Soft parameter");
+        
+        HistosCS[i] ->GetYaxis()->SetTitleSize(SIZE);
+        HistosCS[i] ->GetYaxis()->SetTitleOffset(SIZEOffset);
+
         
     }
     
     
     
+    
+    
     auto legendS = new TLegend(0.75, 0.15, 0.9, 0.4); //(start from left, start from bottom ) //x1,y1,x2,y2
     legendS->SetHeader("Particles","C"); // option "C" allows to center the header
-    legendS->AddEntry(HistosCS[0], "#pi#pm","l");
-    legendS->AddEntry(HistosCS[1], "K#pm","l");
+    legendS->AddEntry(HistosCS[0], "#pi^{#pm}","l");
+    legendS->AddEntry(HistosCS[1], "K^{#pm}","l");
     legendS->AddEntry(HistosCS[2], "p(#bar{p})","l");
 
     legendS->Draw();
 
 
-    TLatex *lkNameleft2 = new TLatex(0.1, 0.025, Form("#color[1]{%s}", "High multiplicity" ) );
+    TLatex *lkNameleft2 = new TLatex(0.1, 0.02, Form("#color[1]{%s}", "High multiplicity" ) );
 
 
     lkNameleft2->SetNDC();
-    lkNameleft2->SetTextSize(0.03);
+    lkNameleft2->SetTextSize(0.05);
     lkNameleft2->Draw();
     
-    TLatex *lkNameright2 = new TLatex(0.75, 0.025, Form("#color[1]{%s}", "Low multiplicity" ) );
+    TLatex *lkNameright2 = new TLatex(0.65, 0.02, Form("#color[1]{%s}", "Low multiplicity" ) );
 
 
     lkNameright2->SetNDC();
-    lkNameright2->SetTextSize(0.03);
+    lkNameright2->SetTextSize(0.05);
     lkNameright2->Draw();
     
     

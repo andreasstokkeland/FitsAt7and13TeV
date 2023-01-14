@@ -1,0 +1,224 @@
+rm: *.so: No such file or directory
+rm: *.d: No such file or directory
+rm: *.pcm: No such file or directory
+   ------------------------------------------------------------------
+  | Welcome to ROOT 6.24/06                        https://root.cern |
+  | (c) 1995-2021, The ROOT Team; conception: R. Brun, F. Rademakers |
+  | Built for macosx64 on Feb 07 2022, 18:03:00                      |
+  | From tags/v6-24-06@v6-24-06                                      |
+  | With Apple clang version 13.0.0 (clang-1300.0.29.30)             |
+  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q'       |
+   ------------------------------------------------------------------
+
+Info in <TMacOSXSystem::ACLiC>: creating shared library /Users/AndreasStokkkeland/FitsAt7and13TeV/outputPutTogetherData/outputDiv/./MultiFit2k7TeV_C.so
+Info in <ROOT::Math::ParameterSettings>: lower/upper bounds outside current parameter value. The value will be set to (low+up)/2 
+
+****************************************
+Minimizer is Minuit2 / Migrad
+Chi2                      =      9.29103
+NDf                       =          314
+Edm                       =   5.8247e-12
+NCalls                    =         2694
+Par_0                     =      2.97779   +/-   0.0596197   
+Par_1                     =     -1.62445   +/-   0.156503    
+Par_2                     =      2.00231   +/-   0.0373995   
+Par_3                     =     -0.66245   +/-   0.0996366   
+Par_4                     =      1.43613   +/-   0.0265804   
+Par_5                     =    -0.168184   +/-   0.0735501   
+Par_6                     =      1.11103   +/-   0.0209341   
+Par_7                     =    0.0813551   +/-   0.0603614   
+Par_8                     =      0.88945   +/-   0.0173554   
+Par_9                     =     0.232925   +/-   0.0521076   
+Par_10                    =     0.662886   +/-   0.0138883   
+Par_11                    =       0.3576   +/-   0.0438858   
+Par_12                    =     0.442696   +/-   0.0107748   
+Par_13                    =     0.451763   +/-   0.0359532   
+Par_14                    =     0.295885   +/-   0.0086469   
+Par_15                    =     0.476423   +/-   0.0296435   
+Par_16                    =     0.152459   +/-   0.006368    
+Par_17                    =      0.45942   +/-   0.0220369   
+Par_18                    =     0.881732   +/-   0.0616539    	 (limited)
+Info in <TCanvas::Print>: eps file Comb2k17TeV.eps has been created
+Info in <TH1F::SaveAs>: ROOT file CSoft1.root has been created
+Info in <TH1F::SaveAs>: ROOT file CHard1.root has been created
+Info in <TH1D::SaveAs>: ROOT file Ck1.root has been created
+Info in <ROOT::Math::ParameterSettings>: lower/upper bounds outside current parameter value. The value will be set to (low+up)/2 
+
+****************************************
+Minimizer is Minuit2 / Migrad
+Chi2                      =      5.96798
+NDf                       =          314
+Edm                       =  7.20426e-06
+NCalls                    =         1883
+Par_0                     =      2.94342   +/-   0.0808151   
+Par_1                     =     -1.54256   +/-   0.19211     
+Par_2                     =      1.98494   +/-   0.0523409   
+Par_3                     =    -0.620944   +/-   0.124095    
+Par_4                     =      1.42938   +/-   0.0377009   
+Par_5                     =    -0.148373   +/-   0.0927192   
+Par_6                     =      1.11358   +/-   0.0297376   
+Par_7                     =    0.0787917   +/-   0.076224    
+Par_8                     =     0.896147   +/-   0.0244583   
+Par_9                     =     0.221874   +/-   0.0656827   
+Par_10                    =     0.671392   +/-   0.0190379   
+Par_11                    =     0.341707   +/-   0.0549125   
+Par_12                    =     0.453121   +/-   0.0139903   
+Par_13                    =     0.428531   +/-   0.0443401   
+Par_14                    =     0.307385   +/-   0.0105089   
+Par_15                    =     0.449387   +/-   0.0359744   
+Par_16                    =      0.16236   +/-   0.006927    
+Par_17                    =     0.430011   +/-   0.0261478   
+Par_18                    =      1.06983   +/-   0.0996472    	 (limited)
+Warning in <TCanvas::Constructor>: Deleting canvas with same name: Simfit
+Info in <TCanvas::Print>: eps file Comb2k27TeV.eps has been created
+Info in <TH1F::SaveAs>: ROOT file CSoft2.root has been created
+Info in <TH1F::SaveAs>: ROOT file CHard2.root has been created
+Info in <TH1D::SaveAs>: ROOT file Ck2.root has been created
+Info in <ROOT::Math::ParameterSettings>: lower/upper bounds outside current parameter value. The value will be set to (low+up)/2 
+
+****************************************
+Minimizer is Minuit2 / Migrad
+Chi2                      =      31.9661
+NDf                       =          314
+Edm                       =  5.84691e-06
+NCalls                    =         1731
+Par_0                     =      3.11135   +/-   0.100766    
+Par_1                     =     -2.50844   +/-   0.241812    
+Par_2                     =      2.08855   +/-   0.066039    
+Par_3                     =     -1.07043   +/-   0.162639    
+Par_4                     =      1.46023   +/-   0.0476755   
+Par_5                     =    -0.256151   +/-   0.122458    
+Par_6                     =       1.0844   +/-   0.0375696   
+Par_7                     =     0.206303   +/-   0.10132     
+Par_8                     =     0.846367   +/-   0.0311506   
+Par_9                     =     0.449519   +/-   0.0876852   
+Par_10                    =     0.605278   +/-   0.0243992   
+Par_11                    =     0.648069   +/-   0.0728222   
+Par_12                    =      0.37108   +/-   0.0179845   
+Par_13                    =     0.795986   +/-   0.0576001   
+Par_14                    =     0.218148   +/-   0.0133337   
+Par_15                    =     0.823936   +/-   0.0450041   
+Par_16                    =    0.0999067   +/-   0.00833448  
+Par_17                    =     0.702732   +/-   0.0295155   
+Par_18                    =     0.942393   +/-   0.0497463    	 (limited)
+Warning in <TCanvas::Constructor>: Deleting canvas with same name: Simfit
+Info in <TCanvas::Print>: eps file Comb2k37TeV.eps has been created
+Info in <TH1F::SaveAs>: ROOT file CSoft3.root has been created
+Info in <TH1F::SaveAs>: ROOT file CHard3.root has been created
+Info in <TH1D::SaveAs>: ROOT file Ck3.root has been created
+Hej
+Info in <TCanvas::Print>: eps file cCk7TeV.eps has been created
+Info in <TCanvas::Print>: eps file cCH7TeV.eps has been created
+Hej
+Info in <TCanvas::Print>: eps file cCS7TeV.eps has been created
+   ------------------------------------------------------------------
+  | Welcome to ROOT 6.24/06                        https://root.cern |
+  | (c) 1995-2021, The ROOT Team; conception: R. Brun, F. Rademakers |
+  | Built for macosx64 on Feb 07 2022, 18:03:00                      |
+  | From tags/v6-24-06@v6-24-06                                      |
+  | With Apple clang version 13.0.0 (clang-1300.0.29.30)             |
+  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q'       |
+   ------------------------------------------------------------------
+
+Info in <TMacOSXSystem::ACLiC>: creating shared library /Users/AndreasStokkkeland/FitsAt7and13TeV/outputPutTogetherData/outputDiv/./MultiFit2k13TeV_C.so
+Info in <ROOT::Math::ParameterSettings>: lower/upper bounds outside current parameter value. The value will be set to (low+up)/2 
+
+****************************************
+Minimizer is Minuit2 / Migrad
+Chi2                      =       11.465
+NDf                       =          341
+Edm                       =  1.20763e-12
+NCalls                    =         2580
+Par_0                     =      3.11368   +/-   0.0573694   
+Par_1                     =      -1.7908   +/-   0.15473     
+Par_2                     =      2.02216   +/-   0.0360669   
+Par_3                     =     -0.65787   +/-   0.101269    
+Par_4                     =      1.42339   +/-   0.0255081   
+Par_5                     =    -0.121888   +/-   0.0753215   
+Par_6                     =      1.08967   +/-   0.0198575   
+Par_7                     =     0.131109   +/-   0.0614671   
+Par_8                     =      0.86547   +/-   0.0162969   
+Par_9                     =     0.279628   +/-   0.0524917   
+Par_10                    =     0.630569   +/-   0.0126612   
+Par_11                    =     0.408073   +/-   0.0429656   
+Par_12                    =     0.417787   +/-   0.00939651  
+Par_13                    =     0.479391   +/-   0.0336069   
+Par_14                    =     0.271562   +/-   0.00710905  
+Par_15                    =     0.491876   +/-   0.0262665   
+Par_16                    =     0.134805   +/-   0.00470402  
+Par_17                    =     0.451297   +/-   0.0174779   
+Par_18                    =     0.849036   +/-   0.0489723    	 (limited)
+Info in <TCanvas::Print>: eps file Comb2k113TeV.eps has been created
+Info in <TH1F::SaveAs>: ROOT file CSoft1.root has been created
+Info in <TH1F::SaveAs>: ROOT file CHard1.root has been created
+Info in <TH1D::SaveAs>: ROOT file Ck1.root has been created
+Info in <ROOT::Math::ParameterSettings>: lower/upper bounds outside current parameter value. The value will be set to (low+up)/2 
+
+****************************************
+Minimizer is Minuit2 / Migrad
+Chi2                      =      26.8886
+NDf                       =          341
+Edm                       =  9.85689e-06
+NCalls                    =         2070
+Par_0                     =      2.96422   +/-   0.0703217   
+Par_1                     =     -1.89309   +/-   0.182442    
+Par_2                     =      2.06431   +/-   0.0457026   
+Par_3                     =    -0.749762   +/-   0.122223    
+Par_4                     =      1.45199   +/-   0.0324345   
+Par_5                     =    -0.136451   +/-   0.0908124   
+Par_6                     =      1.10781   +/-   0.0252309   
+Par_7                     =     0.153413   +/-   0.0741679   
+Par_8                     =     0.881419   +/-   0.0210161   
+Par_9                     =     0.312068   +/-   0.0639972   
+Par_10                    =     0.648297   +/-   0.0167795   
+Par_11                    =     0.441204   +/-   0.0533447   
+Par_12                    =      0.42469   +/-   0.0127445   
+Par_13                    =     0.525567   +/-   0.0423234   
+Par_14                    =      0.27502   +/-   0.00986869  
+Par_15                    =     0.540839   +/-   0.0335886   
+Par_16                    =     0.139087   +/-   0.0065747   
+Par_17                    =      0.48021   +/-   0.022319    
+Par_18                    =     0.842574   +/-   0.0586726    	 (limited)
+Warning in <TCanvas::Constructor>: Deleting canvas with same name: Simfit
+Info in <TCanvas::Print>: eps file Comb2k313TeV.eps has been created
+Info in <TH1F::SaveAs>: ROOT file CSoft3.root has been created
+Info in <TH1F::SaveAs>: ROOT file CHard3.root has been created
+Info in <TH1D::SaveAs>: ROOT file Ck3.root has been created
+Info in <ROOT::Math::ParameterSettings>: lower/upper bounds outside current parameter value. The value will be set to (low+up)/2 
+
+****************************************
+Minimizer is Minuit2 / Migrad
+Chi2                      =      32.2054
+NDf                       =          341
+Edm                       =   1.4478e-06
+NCalls                    =         3251
+Par_0                     =      3.25818   +/-   0.0963916   
+Par_1                     =     -2.70599   +/-   0.23354     
+Par_2                     =      2.08236   +/-   0.0611846   
+Par_3                     =     -1.03356   +/-   0.158226    
+Par_4                     =      1.43848   +/-   0.0434985   
+Par_5                     =    -0.205262   +/-   0.121663    
+Par_6                     =       1.0622   +/-   0.0332279   
+Par_7                     =     0.250219   +/-   0.100906    
+Par_8                     =     0.816927   +/-   0.0267333   
+Par_9                     =     0.505898   +/-   0.0871858   
+Par_10                    =     0.571087   +/-   0.0201556   
+Par_11                    =     0.711052   +/-   0.0722003   
+Par_12                    =     0.346924   +/-   0.0140469   
+Par_13                    =     0.835218   +/-   0.0563561   
+Par_14                    =      0.20858   +/-   0.00993552  
+Par_15                    =     0.828106   +/-   0.0434549   
+Par_16                    =     0.094633   +/-   0.00585411  
+Par_17                    =     0.683031   +/-   0.0277276   
+Par_18                    =     0.979537   +/-   0.0462414    	 (limited)
+Warning in <TCanvas::Constructor>: Deleting canvas with same name: Simfit
+Info in <TCanvas::Print>: eps file Comb2k513TeV.eps has been created
+Info in <TH1F::SaveAs>: ROOT file CSoft5.root has been created
+Info in <TH1F::SaveAs>: ROOT file CHard5.root has been created
+Info in <TH1D::SaveAs>: ROOT file Ck5.root has been created
+Hej
+Info in <TCanvas::Print>: eps file cCk13TeV.eps has been created
+Hej
+Info in <TCanvas::Print>: eps file cCH13TeV.eps has been created
+Info in <TCanvas::Print>: eps file cCS13TeV.eps has been created
+The time of the code 22 s

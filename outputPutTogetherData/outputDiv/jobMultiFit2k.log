@@ -14,104 +14,102 @@ Info in <TMacOSXSystem::ACLiC>: creating shared library /Users/AndreasStokkkelan
 Info in <ROOT::Math::ParameterSettings>: lower/upper bounds outside current parameter value. The value will be set to (low+up)/2 
 
 ****************************************
+         Invalid FitResult  (status = 4 )
+****************************************
 Minimizer is Minuit2 / Migrad
-Chi2                      =      20.2828
+Chi2                      =      96.3794
 NDf                       =          314
-Edm                       =  1.37779e-06
-NCalls                    =         1740
-Par_0                     =       3.2824   +/-   0.116537    
-Par_1                     =    -0.856034   +/-   0.119381    
-Par_2                     =      2.12966   +/-   0.0609981   
-Par_3                     =    -0.351884   +/-   0.0616216   
-Par_4                     =      1.46987   +/-   0.0339013   
-Par_5                     =   -0.0908256   +/-   0.0343238   
-Par_6                     =      1.09612   +/-   0.0244518   
-Par_7                     =    0.0423273   +/-   0.0254244   
-Par_8                     =     0.844017   +/-   0.0234433   
-Par_9                     =     0.124234   +/-   0.0252693   
-Par_10                    =     0.591898   +/-   0.0235248   
-Par_11                    =     0.192104   +/-   0.0260949   
-Par_12                    =     0.351766   +/-   0.0254157   
-Par_13                    =     0.244127   +/-   0.0285985   
-Par_14                    =     0.199053   +/-   0.0228189   
-Par_15                    =     0.258572   +/-   0.0253047   
-Par_16                    =    0.0585141   +/-   0.0209551   
-Par_17                    =     0.250366   +/-   0.023179    
-Par_18                    =     0.562987   +/-   0.06164      	 (limited)
-Par_19                    =            1                      	 (fixed)
+Edm                       =        0.408
+NCalls                    =         4705
+Par_0                     =      38.5356   +/-   2.84125     
+Par_1                     =     -35.4869   +/-   2.83402     
+Par_2                     =      16.7584   +/-   1.21627     
+Par_3                     =     -14.7236   +/-   1.21314     
+Par_4                     =       5.7245   +/-   0.384669    
+Par_5                     =     -4.27121   +/-   0.383038    
+Par_6                     =    -0.168318   +/-   0.059524    
+Par_7                     =      1.28169   +/-   0.0601419   
+Par_8                     =     -3.93757   +/-   0.341505    
+Par_9                     =      4.82348   +/-   0.341451    
+Par_10                    =     -7.06179   +/-   0.57946     
+Par_11                    =      7.71169   +/-   0.579132    
+Par_12                    =     -9.32879   +/-   0.75865     
+Par_13                    =      9.75949   +/-   0.757851    
+Par_14                    =     -9.69484   +/-   0.794652    
+Par_15                    =       9.9791   +/-   0.793674    
+Par_16                    =     -8.13242   +/-   0.685171    
+Par_17                    =      8.28357   +/-   0.684398    
+Par_18                    =    0.0156941   +/-   0.00259419   	 (limited)
 Info in <TCanvas::Print>: eps file Comb2k17TeV.eps has been created
 Info in <TH1F::SaveAs>: ROOT file CSoft1.root has been created
 Info in <TH1F::SaveAs>: ROOT file CHard1.root has been created
-Info in <TH1F::SaveAs>: ROOT file Ck1.root has been created
+Info in <TH1D::SaveAs>: ROOT file Ck1.root has been created
 Info in <ROOT::Math::ParameterSettings>: lower/upper bounds outside current parameter value. The value will be set to (low+up)/2 
 
 ****************************************
 Minimizer is Minuit2 / Migrad
-Chi2                      =      13.8567
+Chi2                      =      27.9514
 NDf                       =          314
-Edm                       =  1.59515e-07
-NCalls                    =         2402
-Par_0                     =      3.18002   +/-   0.132431    
-Par_1                     =    -0.752061   +/-   0.128652    
-Par_2                     =      2.08562   +/-   0.0761059   
-Par_3                     =     -0.30696   +/-   0.0704734   
-Par_4                     =      1.45481   +/-   0.0513436   
-Par_5                     =   -0.0747057   +/-   0.046887    
-Par_6                     =      1.10181   +/-   0.0407328   
-Par_7                     =    0.0378301   +/-   0.038369    
-Par_8                     =     0.860107   +/-   0.0353531   
-Par_9                     =     0.109437   +/-   0.0351161   
-Par_10                    =     0.613594   +/-   0.0311032   
-Par_11                    =     0.171037   +/-   0.033197    
-Par_12                    =     0.379592   +/-   0.0279441   
-Par_13                    =     0.215538   +/-   0.0317048   
-Par_14                    =     0.229474   +/-   0.0250822   
-Par_15                    =     0.226752   +/-   0.0292117   
-Par_16                    =    0.0870875   +/-   0.0206918   
-Par_17                    =     0.218307   +/-   0.0242812   
-Par_18                    =     0.670701   +/-   0.0830958    	 (limited)
-Par_19                    =            1                      	 (fixed)
+Edm                       =  1.07454e-05
+NCalls                    =         4472
+Par_0                     =      63.9614   +/-   0.551124    
+Par_1                     =     -61.0099   +/-   0.546255    
+Par_2                     =      27.3034   +/-   0.395321    
+Par_3                     =     -25.3063   +/-   0.391819    
+Par_4                     =      7.76735   +/-   0.307347    
+Par_5                     =     -6.33247   +/-   0.30476     
+Par_6                     =     -1.94408   +/-   0.252377    
+Par_7                     =      3.05717   +/-   0.250368    
+Par_8                     =     -8.18341   +/-   0.213093    
+Par_9                     =      9.07414   +/-   0.211505    
+Par_10                    =     -13.7434   +/-   0.169077    
+Par_11                    =      14.4029   +/-   0.167953    
+Par_12                    =     -17.9697   +/-   0.123696    
+Par_13                    =       18.405   +/-   0.123022    
+Par_14                    =     -19.4487   +/-   0.0901647   
+Par_15                    =      19.7343   +/-   0.0897823   
+Par_16                    =     -19.5167   +/-   0.0547179   
+Par_17                    =      19.6541   +/-   0.0545839   
+Par_18                    =   0.00788618   +/-   0.000259584  	 (limited)
 Warning in <TCanvas::Constructor>: Deleting canvas with same name: Simfit
 Info in <TCanvas::Print>: eps file Comb2k27TeV.eps has been created
 Info in <TH1F::SaveAs>: ROOT file CSoft2.root has been created
 Info in <TH1F::SaveAs>: ROOT file CHard2.root has been created
-Info in <TH1F::SaveAs>: ROOT file Ck2.root has been created
+Info in <TH1D::SaveAs>: ROOT file Ck2.root has been created
 Info in <ROOT::Math::ParameterSettings>: lower/upper bounds outside current parameter value. The value will be set to (low+up)/2 
 
 ****************************************
 Minimizer is Minuit2 / Migrad
-Chi2                      =      82.9495
+Chi2                      =      129.378
 NDf                       =          314
-Edm                       =  1.75593e-05
-NCalls                    =         1929
-Par_0                     =      3.52237   +/-   0.179719    
-Par_1                     =     -1.28785   +/-   0.17291     
-Par_2                     =      2.27586   +/-   0.104085    
-Par_3                     =    -0.559718   +/-   0.0988399   
-Par_4                     =      1.50766   +/-   0.0697      
-Par_5                     =    -0.136263   +/-   0.0665223   
-Par_6                     =       1.0458   +/-   0.0561034   
-Par_7                     =     0.110037   +/-   0.0555546   
-Par_8                     =     0.761882   +/-   0.0501107   
-Par_9                     =     0.239853   +/-   0.0515134   
-Par_10                    =     0.482571   +/-   0.0449256   
-Par_11                    =     0.346067   +/-   0.0480508   
-Par_12                    =     0.217058   +/-   0.0406416   
-Par_13                    =     0.428382   +/-   0.0446991   
-Par_14                    =    0.0582251   +/-   0.0357375   
-Par_15                    =     0.443192   +/-   0.0394973   
-Par_16                    =   -0.0343656   +/-   0.0259972   
-Par_17                    =     0.373435   +/-   0.0282758   
-Par_18                    =       0.5949   +/-   0.0556388    	 (limited)
-Par_19                    =            1                      	 (fixed)
+Edm                       =  5.10464e-06
+NCalls                    =         4350
+Par_0                     =      160.474   +/-   0.573791    
+Par_1                     =     -157.495   +/-   0.570657    
+Par_2                     =      73.7688   +/-   0.44074     
+Par_3                     =       -71.71   +/-   0.438501    
+Par_4                     =      20.4173   +/-   0.354743    
+Par_5                     =     -18.9549   +/-   0.353063    
+Par_6                     =     -11.9928   +/-   0.297686    
+Par_7                     =       13.085   +/-   0.296364    
+Par_8                     =     -29.9317   +/-   0.255107    
+Par_9                     =       30.784   +/-   0.254034    
+Par_10                    =      -45.728   +/-   0.205173    
+Par_11                    =      46.3321   +/-   0.204374    
+Par_12                    =     -58.9617   +/-   0.151151    
+Par_13                    =      59.3202   +/-   0.150625    
+Par_14                    =     -63.4659   +/-   0.108612    
+Par_15                    =      63.6618   +/-   0.108278    
+Par_16                    =      -57.061   +/-   0.0656762   
+Par_17                    =      57.1325   +/-   0.0655076   
+Par_18                    =    0.0044843   +/-   0.00134444   	 (limited)
 Warning in <TCanvas::Constructor>: Deleting canvas with same name: Simfit
 Info in <TCanvas::Print>: eps file Comb2k37TeV.eps has been created
 Info in <TH1F::SaveAs>: ROOT file CSoft3.root has been created
 Info in <TH1F::SaveAs>: ROOT file CHard3.root has been created
-Info in <TH1F::SaveAs>: ROOT file Ck3.root has been created
+Info in <TH1D::SaveAs>: ROOT file Ck3.root has been created
 Hej
 Info in <TCanvas::Print>: eps file cCk7TeV.eps has been created
-Warning in <TFile::Append>: Replacing existing TH1: Theconstantk (Potential memory leak).
 Info in <TCanvas::Print>: eps file cCH7TeV.eps has been created
 Hej
 Info in <TCanvas::Print>: eps file cCS7TeV.eps has been created
@@ -125,109 +123,110 @@ Info in <TCanvas::Print>: eps file cCS7TeV.eps has been created
    ------------------------------------------------------------------
 
 Info in <TMacOSXSystem::ACLiC>: creating shared library /Users/AndreasStokkkeland/FitsAt7and13TeV/outputPutTogetherData/outputDiv/./MultiFit2k13TeV_C.so
-
-****************************************
-Minimizer is Minuit2 / Migrad
-Chi2                      =      26.0217
-NDf                       =          341
-Edm                       =  1.22312e-05
-NCalls                    =         1899
-Par_0                     =      3.42902   +/-   0.112013    
-Par_1                     =    -0.927753   +/-   0.116497    
-Par_2                     =      2.14205   +/-   0.0459364   
-Par_3                     =    -0.344859   +/-   0.0482143   
-Par_4                     =      1.44685   +/-   0.0223739   
-Par_5                     =   -0.0652985   +/-   0.0234882   
-Par_6                     =      1.06641   +/-   0.0184837   
-Par_7                     =    0.0678614   +/-   0.0199811   
-Par_8                     =     0.813894   +/-   0.0189001   
-Par_9                     =     0.147001   +/-   0.0210921   
-Par_10                    =     0.553947   +/-   0.0216085   
-Par_11                    =     0.216202   +/-   0.023815    
-Par_12                    =     0.326939   +/-   0.0224734   
-Par_13                    =      0.25493   +/-   0.0255492   
-Par_14                    =     0.177558   +/-   0.0216161   
-Par_15                    =     0.262528   +/-   0.0244477   
-Par_16                    =    0.0485695   +/-   0.017406    
-Par_17                    =       0.2408   +/-   0.0193188   
-Par_18                    =     0.560124   +/-   0.0564731   
-Par_19                    =            1                      	 (fixed)
-Info in <TCanvas::Print>: eps file Comb2k113TeV.eps has been created
-Info in <TCanvas::SaveSource>: C++ Macro file: hSB2k113TeV.C has been generated
-Info in <TH1F::SaveAs>: ROOT file CSoft1.root has been created
-Info in <TH1F::SaveAs>: ROOT file CHard1.root has been created
-Info in <TH1F::SaveAs>: ROOT file Ck1.root has been created
+Info in <ROOT::Math::ParameterSettings>: lower/upper bounds outside current parameter value. The value will be set to (low+up)/2 
 
 ****************************************
          Invalid FitResult  (status = 4 )
 ****************************************
 Minimizer is Minuit2 / Migrad
-Chi2                      =       84.574
+Chi2                      =      200.996
 NDf                       =          341
-Edm                       =      1.34861
-NCalls                    =         5041
-Par_0                     =      7.09781   +/-   0.758661    
-Par_1                     =     -4.84313   +/-   0.761149    
-Par_2                     =      3.17267   +/-   0.319668    
-Par_3                     =     -1.37636   +/-   0.323018    
-Par_4                     =      1.65719   +/-   0.284074    
-Par_5                     =    -0.253367   +/-   0.289065    
-Par_6                     =     0.763736   +/-   0.178331    
-Par_7                     =     0.403838   +/-   0.182185    
-Par_8                     =     0.187842   +/-   0.200683    
-Par_9                     =     0.810018   +/-   0.205767    
-Par_10                    =    -0.322678   +/-   0.139074    
-Par_11                    =      1.13648   +/-   0.141048    
-Par_12                    =    -0.648673   +/-   0.145575    
-Par_13                    =      1.26736   +/-   0.146012    
-Par_14                    =    -0.761652   +/-   0.15064     
-Par_15                    =      1.23089   +/-   0.152212    
-Par_16                    =    -0.744757   +/-   0.120697    
-Par_17                    =      1.05419   +/-   0.121034    
-Par_18                    =     0.101734   +/-   0.0107623   
-Par_19                    =            1                      	 (fixed)
-Warning in <TCanvas::Constructor>: Deleting canvas with same name: Simfit
-Info in <TCanvas::Print>: eps file Comb2k313TeV.eps has been created
-Info in <TCanvas::SaveSource>: C++ Macro file: hSB2k313TeV.C has been generated
-Info in <TH1F::SaveAs>: ROOT file CSoft3.root has been created
-Info in <TH1F::SaveAs>: ROOT file CHard3.root has been created
-Info in <TH1F::SaveAs>: ROOT file Ck3.root has been created
+Edm                       =       1.4077
+NCalls                    =         4721
+Par_0                     =      43.5452   +/-   6.4318      
+Par_1                     =     -40.8531   +/-   6.42869     
+Par_2                     =      31.4801   +/-   4.63233     
+Par_3                     =     -29.5653   +/-   4.63069     
+Par_4                     =      11.3706   +/-   1.6082      
+Par_5                     =     -9.95711   +/-   1.60747     
+Par_6                     =     -9.75951   +/-   1.54118     
+Par_7                     =      10.8515   +/-   1.54147     
+Par_8                     =     -30.2319   +/-   4.53315     
+Par_9                     =      31.0788   +/-   4.53328     
+Par_10                    =      -39.706   +/-   5.9772      
+Par_11                    =       40.324   +/-   5.97692     
+Par_12                    =     -53.8068   +/-   8.02366     
+Par_13                    =      54.1985   +/-   8.0234      
+Par_14                    =      -54.575   +/-   8.14612     
+Par_15                    =      54.8211   +/-   8.14576     
+Par_16                    =     -42.2085   +/-   6.35046     
+Par_17                    =      42.3336   +/-   6.35003     
+Par_18                    =   0.00340062   +/-   0.000370153  	 (limited)
+Info in <TCanvas::Print>: eps file Comb2k113TeV.eps has been created
+Info in <TH1F::SaveAs>: ROOT file CSoft1.root has been created
+Info in <TH1F::SaveAs>: ROOT file CHard1.root has been created
+Info in <TH1D::SaveAs>: ROOT file Ck1.root has been created
+Info in <ROOT::Math::ParameterSettings>: lower/upper bounds outside current parameter value. The value will be set to (low+up)/2 
 
 ****************************************
+         Invalid FitResult  (status = 4 )
+****************************************
 Minimizer is Minuit2 / Migrad
-Chi2                      =       95.353
+Chi2                      =      96.1668
 NDf                       =          341
-Edm                       =  4.55602e-11
-NCalls                    =         1710
-Par_0                     =      3.62632   +/-   0.161518    
-Par_1                     =     -1.28701   +/-   0.156962    
-Par_2                     =       2.2374   +/-   0.0902411   
-Par_3                     =    -0.503542   +/-   0.08762     
-Par_4                     =      1.47245   +/-   0.0609277   
-Par_5                     =    -0.103168   +/-   0.0613152   
-Par_6                     =      1.02406   +/-   0.0481915   
-Par_7                     =     0.121613   +/-   0.0517944   
-Par_8                     =     0.735937   +/-   0.0422538   
-Par_9                     =     0.249984   +/-   0.0479215   
-Par_10                    =     0.453854   +/-   0.0373817   
-Par_11                    =     0.354887   +/-   0.0444341   
-Par_12                    =     0.207503   +/-   0.0327948   
-Par_13                    =     0.418325   +/-   0.0398737   
-Par_14                    =    0.0700645   +/-   0.0279      
-Par_15                    =     0.414204   +/-   0.0337076   
-Par_16                    =   -0.0179601   +/-   0.0195916   
-Par_17                    =     0.336485   +/-   0.0227309   
-Par_18                    =     0.656792   +/-   0.0566777   
-Par_19                    =            1                      	 (fixed)
+Edm                       =     0.713006
+NCalls                    =         4716
+Par_0                     =      131.911   +/-   4.93995     
+Par_1                     =     -128.929   +/-   4.92893     
+Par_2                     =      57.0958   +/-   2.1221      
+Par_3                     =     -55.0054   +/-   2.11818     
+Par_4                     =      13.3826   +/-   0.487757    
+Par_5                     =     -11.9158   +/-   0.486879    
+Par_6                     =     -8.41196   +/-   0.351818    
+Par_7                     =      9.52117   +/-   0.353034    
+Par_8                     =     -20.7896   +/-   0.848966    
+Par_9                     =      21.6683   +/-   0.844378    
+Par_10                    =     -31.1412   +/-   1.28569     
+Par_11                    =      31.7786   +/-   1.28634     
+Par_12                    =     -37.6922   +/-   1.60102     
+Par_13                    =      38.1052   +/-   1.59843     
+Par_14                    =     -38.2618   +/-   1.67024     
+Par_15                    =      38.5263   +/-   1.6683      
+Par_16                    =     -31.0116   +/-   1.41237     
+Par_17                    =      31.1485   +/-   1.41111     
+Par_18                    =    0.0047168   +/-   8.33519e-05  	 (limited)
+Warning in <TCanvas::Constructor>: Deleting canvas with same name: Simfit
+Info in <TCanvas::Print>: eps file Comb2k313TeV.eps has been created
+Info in <TH1F::SaveAs>: ROOT file CSoft3.root has been created
+Info in <TH1F::SaveAs>: ROOT file CHard3.root has been created
+Info in <TH1D::SaveAs>: ROOT file Ck3.root has been created
+Info in <ROOT::Math::ParameterSettings>: lower/upper bounds outside current parameter value. The value will be set to (low+up)/2 
+
+****************************************
+         Invalid FitResult  (status = 4 )
+****************************************
+Minimizer is Minuit2 / Migrad
+Chi2                      =      131.657
+NDf                       =          341
+Edm                       =   0.00322775
+NCalls                    =         4731
+Par_0                     =      111.072   +/-   7.92686     
+Par_1                     =     -107.914   +/-   7.9294      
+Par_2                     =      49.0685   +/-   5.6334      
+Par_3                     =     -46.9723   +/-   5.60689     
+Par_4                     =      11.8843   +/-   2.95174     
+Par_5                     =     -10.4349   +/-   2.93083     
+Par_6                     =     -9.88849   +/-   1.29849     
+Par_7                     =      10.9488   +/-   1.29415     
+Par_8                     =     -22.9787   +/-   2.60795     
+Par_9                     =      23.7811   +/-   2.60135     
+Par_10                    =     -33.2348   +/-   3.56395     
+Par_11                    =      33.7822   +/-   3.55532     
+Par_12                    =     -38.9351   +/-   3.32432     
+Par_13                    =      39.2532   +/-   3.32269     
+Par_14                    =     -40.8838   +/-   3.57162     
+Par_15                    =      41.0536   +/-   3.5701      
+Par_16                    =     -36.3604   +/-   3.36562     
+Par_17                    =      36.4136   +/-   3.36396     
+Par_18                    =   0.00711061   +/-   0.00154674   	 (limited)
 Warning in <TCanvas::Constructor>: Deleting canvas with same name: Simfit
 Info in <TCanvas::Print>: eps file Comb2k513TeV.eps has been created
-Info in <TCanvas::SaveSource>: C++ Macro file: hSB2k513TeV.C has been generated
 Info in <TH1F::SaveAs>: ROOT file CSoft5.root has been created
 Info in <TH1F::SaveAs>: ROOT file CHard5.root has been created
-Info in <TH1F::SaveAs>: ROOT file Ck5.root has been created
-Warning in <TFile::Append>: Replacing existing TH1: Theconstantk (Potential memory leak).
+Info in <TH1D::SaveAs>: ROOT file Ck5.root has been created
+Hej
 Info in <TCanvas::Print>: eps file cCk13TeV.eps has been created
 Hej
 Info in <TCanvas::Print>: eps file cCH13TeV.eps has been created
 Info in <TCanvas::Print>: eps file cCS13TeV.eps has been created
-The time of the code 22 s
+The time of the code 23 s
