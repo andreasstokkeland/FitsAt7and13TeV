@@ -18,7 +18,7 @@ TBrowser "your name for the browser (for example: a)"
 
 
 
-Here the data files from HEPData...
+Here are the data files from HEPData...
 
 ... at 7 TeV; https://www.hepdata.net/record/ins1684320 
 HEPData-ins1684320-v1-root.root
@@ -31,7 +31,7 @@ HEPData-ins1784041-v1-Table_4.root
 HEPData-ins1784041-v1-Table_5.root
 HEPData-ins1784041-v1-Table_6.root
 
-are used as input to 
+They are used as input to 
 PutTogetherData7TeV.C
 PutTogetherData13TeV.C
 
